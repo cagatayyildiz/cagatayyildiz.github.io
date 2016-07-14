@@ -8,7 +8,8 @@ A member of [http://www.cmpe.boun.edu.tr/pilab/doku.php Perceptual Intelligence 
 Department of Computer Engineering, Bogazici University, 34342 Bebek, Istanbul, Turkey \n
 Phone: \+90 212 359 4523 \n
 Fax: \+90 212 287 2461 \n
-E-mail: cagatay.yildiz1 \[@\] boun \[DOT\] edu \[DOT\] tr
+E-mail: cagatay.yildiz1 \[at\] boun \[DOT\] edu \[DOT\] tr \n
+ \[[https://github.com/cagatayyildiz github\]], \[[https://twitter.com/CgtyYldz twitter\]]
 ~~~
 
 
@@ -24,17 +25,17 @@ My research interests include
 
 My CV is [https://www.dropbox.com/s/xlhsbn84zi466gn/CV.pdf?dl=0 here].
 
-Details regarding my research are [research.html here]. \n
+Details regarding my research are [projects.html here]. \n
 
 
 == Publications 
 === International Conference
 - Yıldız, Ç.; Semerci, M.; Ceritli, T.Y.; Kurt, B.; Cemgil, A.T. & Sankur, B. (2016), ’Change Point Detection for Monitoring SIP Networks’, European Conference on Networks and Communications. 
 === National Conference
-- Yıldız, Ç..; Ceritli, T.Y.; Kurt, B.; Sankur, B.; & Cemgil, A.T. (2016), ’Bayesçi Çoklu Değişim Noktası Modeliyle VoIP Ağlarda Saldırı Tespiti’, IEEE Singal Processing and Communications Applications. \[ [papers/bayesci-coklu-degisim.pdf pdf] \]
-- Kurt, B.; Yıldız, Ç..; Ceritli, T.Y.; Yamaç, M.; Semerci, M.; Sankur, B.; & Cemgil, A.T. (2016), ’Olasılıksal SIP Ağı Benzetim Sistemi’, IEEE Singal Processing and Communications Applications. \[ [papers/olasiliksal-sip-agi.pdf pdf] \]
+- Yıldız, Ç..; Ceritli, T.Y.; Kurt, B.; Sankur, B.; & Cemgil, A.T. (2016), ’Bayesçi Çoklu Değişim Noktası Modeliyle VoIP Ağlarda Saldırı Tespiti’, IEEE Singal Processing and Communications Applications. \[ [pdf/bayesci-coklu-degisim.pdf pdf] \]
+- Kurt, B.; Yıldız, Ç..; Ceritli, T.Y.; Yamaç, M.; Semerci, M.; Sankur, B.; & Cemgil, A.T. (2016), ’Olasılıksal SIP Ağı Benzetim Sistemi’, IEEE Singal Processing and Communications Applications. \[ [pdf/olasiliksal-sip-agi.pdf pdf] \]
 === Workshop
-- Ceritli, T.Y.; Kurt, B.; Yıldız, Ç.; Sankur, B.; & Cemgil, A.T. (2016), ‘A Dictionary Learning Based Anomaly Detection Method for Network Traffic Data’, International Conference on Machine Learning (ICML) Anomaly Detection Workshop. \[ [papers/a-dictionary-learning-based.pdf pdf] \]
+- Ceritli, T.Y.; Kurt, B.; Yıldız, Ç.; Sankur, B.; & Cemgil, A.T. (2016), ‘A Dictionary Learning Based Anomaly Detection Method for Network Traffic Data’, International Conference on Machine Learning (ICML) Anomaly Detection Workshop. \[ [pdf/a-dictionary-learning-based.pdf pdf] \]
 === Technical Report
 - Yıldız, Ç.; Kurt, B.; Ceritli, T.Y.; Cemgil, A.T. & Sankur, B. (2016), ‘BOUN-SIM API Reference’ \[ [https://github.com/cagatayyildiz/boun-sim/ code] \] \[ [https://github.com/cagatayyildiz/boun-sim/blob/master/boun-sim-api.pdf pdf] \]
 
