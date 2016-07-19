@@ -24,6 +24,8 @@ To detect such changes, we built a *Bayesian multiple change point model*, whose
 
 In the model, deciding whether a change has occurred at time $t$ is tantamount to calculating the posterior probability of $r_t$. This can be done by writing the forward recursions ($\alpha_{t|t}(r_t, \pi_t) = p(r_t, \pi_t, x_{1:t})$) and integrating $\pi_t$ out. If the task is not online, the posterior can be calculated conditioned on the full history of observations.
 
+I collected all my work on this model, including derivations and the implementation, in this [code/MCP.ipynb jupyter notebook]. With python3.5 and necessary libraries installed, you can run the inference algorithm for your tasks. Furthermore, I am currently studying *online parameter learning* in this model and hopefully update the notebook soon. 
+
 == Mixed Memory Hidden Markov Model for Optimal Newspaper Delivery (2015)
 In this work, we are interested in the prediction of newspaper sales distributed to 2000+ outlets in Istanbul. This is actually a classical example of an optimization problem: A newspaper outlet would like to meet all customer demands, which actually can be achieved if the outlet receives more newspapers than it could sell from the distributor. However, the distributor has to collect the unsold newspapers next day, and this creates an additional cost.	
 
