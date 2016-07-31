@@ -6,7 +6,7 @@ In [http://www2.cmpe.boun.edu.tr/pilab/doku.php PILAB], we mainly use Matlab and
 
 At some point in my Master's, I studied in hidden Markov models and then implemented stuff such as /forward&backward recursions/, /correction smoother/, /recursive smoother/, /batch&*online* learning algorihms/ in C\+\+ using pml. The module is currently under pml, named as +pml\_hmm.hpp+. You can clone the repo and start enjoying a fast implementation of HMM.
 
-== Jupyter Notebook for Bayesian Change Point Model \[[code/MCP.ipynb code&derivations]\]
+== Jupyter Notebook for Bayesian Change Point Model \[[https://github.com/cagatayyildiz/bayesian/blob/master/Bayesian_Change_Point_Model.ipynb code&derivations]\]
 The main focus of my thesis is Bayesian change point model. So far, I have implemented the inference algorithm to evaluate change point probabilities. I collected all my work on the model, including derivations and the implementation, in this [code/MCP.ipynb jupyter notebook]. With python3.5 and necessary libraries installed, you can run the inference algorithm for your tasks. Furthermore, I am currently studying *online parameter learning* in this model and hopefully update the notebook and put it into my github page soon. 
 
 == boun-sim: A Real-Time SIP Traffic Generator \[[https://github.com/cagatayyildiz/boun-sim code&documentation]\]

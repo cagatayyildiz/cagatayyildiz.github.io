@@ -3,7 +3,7 @@
 
 Below are the projects I have been working on in the last two years:
 
-== Bayesian Multiple Change Point Model for DDoS Detection in SIP Networks (2015-...) *\[[html/Bayesian_Change_Point_Model.html code & derivation]\]*
+== Bayesian Multiple Change Point Model for DDoS Detection in SIP Networks (2015-...) *\[[html/Bayesian_Change_Point_Model.html html]\]* *\[[https://github.com/cagatayyildiz/bayesian/blob/master/Bayesian_Change_Point_Model.ipynb notebook]\]*
 The goal in this project is to build a firewall for [https://en.wikipedia.org/wiki/Session_Initiation_Protocol SIP (Session Initiation Protocol)] networks. SIP is currently the most popular protocol that enables session control in computer communication networks and therefore, SIP servers have become targets of various attacks, such as [https://en.wikipedia.org/wiki/Denial-of-service_attack DDoS (Distributed Denial of Service)] attacks. DDoS attacks usually result in an abrupt change in the network traffic. 
 
 To detect such changes, we built a *Bayesian multiple change point model*, whose input is a set of features extracted from network traffic. The observation at time $t$, $x_t$, is assumed to be a random variable generated from a multinomial distribution with an unknown parameter $\pi_t$. At change points, or when $r_t=1$, $\pi_t$ is reset to a new value; otherwise, it keeps its value unchanged. Considering all together, the generative model of BCPM can be expressed as follows:
