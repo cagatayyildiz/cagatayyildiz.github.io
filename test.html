@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <script src="https://cdn.jsdelivr.net/jquery/3.1.1/jquery.min.js"></script>
+    <style>
+      #clickableList{
+        list-style-type:lower-greek;
+      }
+      #clickableList>li>pre{
+        display:none;
+      }
+      #clickableList>li>span:hover{
+        background-color: yellow;
+      }
+    </style>
+    <script type="text/javascript">
+      $(document).ready(function(){
+        $("#clickableList>li>span").click(function(olay){
+          var hedefimiz = $(olay.target);
+          x = hedefimiz;
+          if(hedefimiz.is("#clickableList>li>span")){
+            hedefimiz.siblings("pre").slideToggle();
+          }
+        });
+        $(document).keydown(function(olay){
+          if (olay.ctrlKey && olay.shiftKey){
+            if(olay.which === 88){  // X -> eXpand
+              olay.preventDefault();
+              $("#clickableList>li>pre").slideDown();
+            }else if(olay.which === 90){ // Z -> collepZ (collapse)
+              olay.preventDefault();
+              $("#clickableList>li>pre").slideUp();
+            }
+          }
+        });
+      });
+    </script>
+    <title>Cagatay Yildiz </title>
+  </head>
+  <body>
+    <span style="color:gray;"><small> Ctrl + Shift + X for eXpanding <br />
+     Ctrl + Shift + Z for collapsing </small></span>
+    <ul id="clickableList">
+      <li>
+        <span>Vatan Haini - Nazım Hikmet</span>
+        <pre>
+          "Nâzım Hikmet vatan hainliğine devam ediyor hâlâ.
+          Amerikan emperyalizminin yarı sömürgesiyiz, dedi Hikmet.
+          Nâzım Hikmet vatan hainliğine devam ediyor hâlâ."
+          Bir Ankara gazetesinde çıktı bunlar, üç sütun üstüne, kapkara haykıran puntolarla,
+          bir Ankara gazetesinde, fotoğrafı yanında Amiral Vilyamson'un
+          66 santimetre karede gülüyor, ağzı kulaklarında, Amerikan amirali
+          Amerika, bütçemize 120 milyon lira hibe etti, 120 milyon lira.
+          "Amerikan emperyalizminin yarı sömürgesiyiz, dedi Hikmet
+          Nâzım Hikmet vatan hainliğine devam ediyor hâlâ."
+
+          Evet, vatan hainiyim, siz vatanperverseniz, siz yurtseverseniz, ben yurt
+                     hainiyim, ben vatan hainiyim.
+          Vatan çiftliklerinizse,
+          kasalarınızın ve çek defterlerinizin içindekilerse vatan,
+          vatan, şose boylarında gebermekse açlıktan,
+          vatan, soğukta it gibi titremek ve sıtmadan kıvranmaksa yazın,
+          fabrikalarınızda al kanımızı içmekse vatan,
+          vatan tırnaklarıysa ağalarınızın,
+          vatan, mızraklı ilmühalse, vatan, polis copuysa,
+          ödeneklerinizse, maaşlarınızsa vatan,
+          vatan, Amerikan üsleri, Amerikan bombası, Amerikan donanması topuysa,
+          vatan, kurtulmamaksa kokmuş karanlığımızdan,
+                                      ben vatan hainiyim.
+          Yazın üç sütun üstüne kapkara haykıran puntolarla :
+          Nâzım Hikmet vatan hainliğine devam ediyor hâlâ.
+
+        </pre>
+      </li>
+      <li>
+        <span>Göğe Bakma Durağı - Turgut Uyar</span>
+        <pre>
+          İkimiz birden sevinebiliriz göğe bakalım
+          Şu kaçamak ışıklardan şu şeker kamışlarından
+          Bebe dişlerinden güneşlerden yanab otlarından
+          Durmadan harcadığım şu gözlerimi al kurtar
+          Şu aranıp duran korkak ellerimi tut
+          Bu evleri atla bu evleri de bunları da
+          Göğe bakalım
+
+          Falanca durağa şimdi geliriz göğe bakalım
+          İnecek var deriz otobüs durur ineriz
+          Bu karanlık böyle iyi afferin Tanrıya
+          Herkes uyusun iyi oluyor hoşlanıyorum
+          Hırsızlar polisler açlar toklar uyusun
+          Herkes uyusun bir seni uyutmam bir de ben uyumam
+          Herkes yokken biz oluruz biz uyumayalım
+          Nasıl olsa sarhoşuz nasıl olsa öpüşürüz sokaklarda
+          Beni bırak göğe bakalım
+
+          Senin bu ellerinde ne var bilmiyorum göğe bakalım
+          Tuttukça güçleniyorum kalabalık oluyorum
+          Bu senin eski zaman gözlerin yalnız gibi ağaçlar gibi
+          Sularım ısınsın diye bakıyorum ısınıyor
+          Seni aldım bu sunturlu yere getirdim
+          Sayısız penceren vardı bir bir kapattım
+          Bana dönesin diye bir bir kapattım
+          Şimdi otobüs gelir biner gideriz
+          Dönmeyeceğimiz bir yer beğen başka türlüsü güç
+          Bir ellerin bir ellerim yeter belleyelim yetsin
+          Seni aldım bana ayırdım durma kendini hatırlat
+          Durma kendini hatırlat
+          Durma göğe bakalım
+        </pre>
+      </li>
+    </ul>
+  </body>
+</html>
