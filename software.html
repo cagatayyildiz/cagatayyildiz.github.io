@@ -20,17 +20,16 @@
 <div class="menu-category">Personal</div>
 <div class="menu-item"><a href="writings.html">writings</a></div>
 <div class="menu-item"><a href="books.html">Books</a></div>
-<div class="menu-item"><a href="b.html">şiirler</a></div>
 </td>
 <td id="layout-content">
 <div id="toptitle">
 <h1>Software</h1>
 </div>
-<h2>PML: PILAB Matrix and Machine Learning Library [<a href="https://github.com/bariskurt/pml">code</a>]</h2>
+<h2>PML: PILAB Matrix and Machine Learning Library [<a href="https://github.com/pilab-sigma/pml">code</a>]</h2>
 <p>In <a href="http://www2.cmpe.boun.edu.tr/pilab/doku.php">PILAB</a>, we mainly use Matlab and Python in our research projects. These languages are great to build prototype of whatever computation model in mind. When it comes to conducting experiments with huge data sets, however, it usually takes hours or days to run a single experiment. This is why my lab-mate <a href="http://bariskurt.com/">Barış Kurt</a> started a C++ project for developing linear algebra and machine learning applications that will speed up C++ coding. Barış has implemented most parts of the library, my contribution to pml is <tt>Tensor3D</tt> class.</p>
-<p>At some point in my Master's, I studied in hidden Markov models and then implemented stuff such as <i>forward&amp;backward recursions</i>, <i>correction smoother</i>, <i>recursive smoother</i>, <i>batch&amp;<b>online</b> learning algorihms</i> in C++ using pml. The module is currently under pml, named as <tt>pml_hmm.hpp</tt>. You can clone the repo and start enjoying a fast implementation of HMM.</p>
-<h2>Jupyter Notebook for Bayesian Change Point Model [<a href="https://github.com/cagatayyildiz/bayesian/blob/master/Bayesian_Change_Point_Model.ipynb">code&amp;derivations</a>]</h2>
-<p>The main focus of my thesis is Bayesian change point model. So far, I have implemented the inference algorithm to evaluate change point probabilities. I collected all my work on the model, including derivations and the implementation, in this <a href="code/MCP.ipynb">jupyter notebook</a>. With python3.5 and necessary libraries installed, you can run the inference algorithm for your tasks. Furthermore, I am currently studying <b>online parameter learning</b> in this model and hopefully update the notebook and put it into my github page soon. </p>
+<p>At some point in my Master's, I studied in hidden Markov models and then implemented stuff such as forward&amp;backward recursions, correction smoother, recursive smoother, batch&amp;online learning algorihms in C++ using pml. The module is currently under pml, named as <tt>pml_hmm.hpp</tt>. You can clone the repo and start enjoying a fast implementation of HMM.</p>
+<h2>Jupyter Notebook for Bayesian Change Point Model [<a href="https://github.com/pilab-sigma/bcpm">code&amp;derivations</a>]</h2>
+<p>The main focus of my thesis is Bayesian change point model. I have written two jupyter notebooks, where you can find the generative model, a few toy examples and python implementation of the model in the link given above. With python3.5 and necessary libraries installed, you can run the inference algorithm for your tasks. You may also have a look at C++ implementation of the model (also in the link next to title). Our C++ library is much more generic and very easy to extend.</p>
 <h2>boun-sim: A Real-Time SIP Traffic Generator [<a href="https://github.com/cagatayyildiz/boun-sim">code&amp;documentation</a>]</h2>
 <p>The goal in one of my projects is to build a firewall for <a href="https://en.wikipedia.org/wiki/Session_Initiation_Protocol">SIP (Session Initiation Protocol)</a> networks, SIP being the most popular protocol that enables session control in computer communication networks. It is usually not very easy to find data sets in domains that incorparate features that may violate user privacy. Therefore, to mimic the traffic on a SIP network, we built boun-sim: a probabilistic SIP network simulation system, which simply initiates calls between a number of users in real-time. </p>
 <h2>buyemek: An Android Application for Student Cafeteria Menu [<a href="https://github.com/cagatayyildiz/BUyemek">code</a>] [<a href="https://play.google.com/store/apps/details?id=com.cmpe.boun.buyemek">app</a>]</h2>

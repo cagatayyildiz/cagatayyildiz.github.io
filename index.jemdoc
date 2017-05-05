@@ -14,11 +14,8 @@ E-mail: cagatay.yildiz1 \[at\] boun \[DOT\] edu \[DOT\] tr \n
 
 
 == About me
-I graduated from [http://ankarafenlisesi.meb.k12.tr/ Ankara Science High School] in 2009 and received B.S. degree from [http://www.cmpe.boun.edu.tr/ Bogazici University Computer Engineering Department] in 2014 with 3.52/4.00 GPA. I am currently a Master's degree student supervised by [http://www.cmpe.boun.edu.tr/~cemgil  Assoc. Prof. Ali Taylan Cemgil] (expected graduation in January 2017) and teaching assistant at the same department. 
+I graduated from [http://ankarafenlisesi.meb.k12.tr/ Ankara Science High School] in 2009 and received B.S. degree from [http://www.cmpe.boun.edu.tr/ Bogazici University Computer Engineering Department] in 2014 with 3.52/4.00 GPA. I am currently a Master's degree student supervised by [http://www.cmpe.boun.edu.tr/~cemgil  Assoc. Prof. Ali Taylan Cemgil] (expected graduation in June 2017) and teaching assistant at the same department. 
 
-
-== Teaching
-I have been a teaching assitant at Bogazici University sine January, 2015. Depending on how hard the position is, assistans are assigned to one or two courses. So far, I have assisted Introduction to Object Oriented Programming (twice) and Data Structures and Algorithm courses. Plus, I participated in a [http://www.stanford-bogazici.com/ summer camp], where we taught high school students how to program in Java.
 
 == Research
 My research interests include 
@@ -29,6 +26,8 @@ My research interests include
 
 My CV is [pdf/CV.pdf here].
 
+My M.Sc. thesis (draft) is [https://www.dropbox.com/s/4ip3hsij6jk7bdi/thesis.pdf?dl=0 here]. 
+
 Details regarding my research are [projects.html here]. \n
 
 
@@ -37,9 +36,9 @@ Details regarding my research are [projects.html here]. \n
 - Kurt, B.; Yıldız, Ç.; Ceritli, T. Y.;  Sankur, B.; & Cemgil, A.T. (2016), “A Bayesian Change Point Model for Detecting SIP-based DDoS Attacks”, Digital Signal Processing, 2016 \[submitted\]
 - Yıldız, Ç.; Kurt, B.; Ceritli, T. Y.;  Sankur, B.; & Cemgil, A.T. (2016), "A Real-Time SIP Network Simulation and Monitoring System", SoftwareX, (2016) \[submitted\]
 === International Conference
-- Yıldız, Ç.; Semerci, M.; Ceritli, T.Y.; Kurt, B.; Cemgil, A.T. & Sankur, B. (2016), ’Change Point Detection for Monitoring SIP Networks’, European Conference on Networks and Communications. 
+- Yıldız, Ç.; Semerci, M.; Ceritli, T.Y.; Kurt, B.; Cemgil, A.T. & Sankur, B. (2016), ’Change Point Detection for Monitoring SIP Networks’, European Conference on Networks and Communications. \[ [pdf/eucnc.pdf pdf] \]
 === National Conference
-- Yıldız, Ç​ .; Bingöl, O.H.; Irim, G.; Aktekin, B.; & Aykut-Bingöl, C. (2017), ’A Bayesian Change Point Model for Epileptic Seizure Detection’, IEEE Singal Processing and Communications Applications. \[submitted\] \[ [pdf/epilepsi.pdf pdf] \]
+- Yıldız, Ç​ .; Bingöl, O.H.; Irim, G.; Aktekin, B.; & Aykut-Bingöl, C. (2017), ’A Bayesian Change Point Model for Epileptic Seizure Detection’, IEEE Singal Processing and Communications Applications. \[ [pdf/epilepsi.pdf pdf] \]
 - Yıldız, Ç..; Ceritli, T.Y.; Kurt, B.; Sankur, B.; & Cemgil, A.T. (2016), ’Bayesçi Çoklu Değişim Noktası Modeliyle VoIP Ağlarda Saldırı Tespiti’, IEEE Singal Processing and Communications Applications. \[ [pdf/bayesci-coklu-degisim.pdf pdf] \]
 - Kurt, B.; Yıldız, Ç..; Ceritli, T.Y.; Yamaç, M.; Semerci, M.; Sankur, B.; & Cemgil, A.T. (2016), ’Olasılıksal SIP Ağı Benzetim Sistemi’, IEEE Singal Processing and Communications Applications. \[ [pdf/olasiliksal-sip-agi.pdf pdf] \]
 === Workshop
@@ -47,3 +46,6 @@ Details regarding my research are [projects.html here]. \n
 === Technical Report
 - Yıldız, Ç.; Kurt, B.; Ceritli, T.Y.; Cemgil, A.T. & Sankur, B. (2016), ‘BOUN-SIM API Reference’ \[ [https://github.com/cagatayyildiz/boun-sim/ code] \] \[ [https://github.com/cagatayyildiz/boun-sim/blob/master/boun-sim-api.pdf pdf] \]
 
+
+== Teaching
+I have been a teaching assitant at Bogazici University sine January, 2015. Depending on how hard the position is, assistans are assigned to one or two courses. So far, I have assisted Introduction to Object Oriented Programming (twice) and Data Structures and Algorithm courses. Plus, I participated in a [http://www.stanford-bogazici.com/ summer camp], where we taught high school students how to program in Java.

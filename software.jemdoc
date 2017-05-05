@@ -1,13 +1,13 @@
 # jemdoc: menu{MENU}{software.html}, nofooter  
 = Software
 
-== PML: PILAB Matrix and Machine Learning Library \[[https://github.com/bariskurt/pml code]\]
+== PML: PILAB Matrix and Machine Learning Library \[[https://github.com/pilab-sigma/pml code]\]
 In [http://www2.cmpe.boun.edu.tr/pilab/doku.php PILAB], we mainly use Matlab and Python in our research projects. These languages are great to build prototype of whatever computation model in mind. When it comes to conducting experiments with huge data sets, however, it usually takes hours or days to run a single experiment. This is why my lab-mate [http://bariskurt.com/ Barış Kurt] started a C\+\+ project for developing linear algebra and machine learning applications that will speed up C\+\+ coding. Barış has implemented most parts of the library, my contribution to pml is +Tensor3D+ class.
 
-At some point in my Master's, I studied in hidden Markov models and then implemented stuff such as /forward&backward recursions/, /correction smoother/, /recursive smoother/, /batch&*online* learning algorihms/ in C\+\+ using pml. The module is currently under pml, named as +pml\_hmm.hpp+. You can clone the repo and start enjoying a fast implementation of HMM.
+At some point in my Master's, I studied in hidden Markov models and then implemented stuff such as forward&backward recursions, correction smoother, recursive smoother, batch&online learning algorihms in C\+\+ using pml. The module is currently under pml, named as +pml\_hmm.hpp+. You can clone the repo and start enjoying a fast implementation of HMM.
 
-== Jupyter Notebook for Bayesian Change Point Model \[[https://github.com/cagatayyildiz/bayesian/blob/master/Bayesian_Change_Point_Model.ipynb code&derivations]\]
-The main focus of my thesis is Bayesian change point model. So far, I have implemented the inference algorithm to evaluate change point probabilities. I collected all my work on the model, including derivations and the implementation, in this [code/MCP.ipynb jupyter notebook]. With python3.5 and necessary libraries installed, you can run the inference algorithm for your tasks. Furthermore, I am currently studying *online parameter learning* in this model and hopefully update the notebook and put it into my github page soon. 
+== Jupyter Notebook for Bayesian Change Point Model \[[https://github.com/pilab-sigma/bcpm code&derivations]\]
+The main focus of my thesis is Bayesian change point model. I have written two jupyter notebooks, where you can find the generative model, a few toy examples and python implementation of the model in the link given above. With python3.5 and necessary libraries installed, you can run the inference algorithm for your tasks. You may also have a look at C\+\+ implementation of the model (also in the link next to title). Our C\+\+ library is much more generic and very easy to extend.
 
 == boun-sim: A Real-Time SIP Traffic Generator \[[https://github.com/cagatayyildiz/boun-sim code&documentation]\]
 The goal in one of my projects is to build a firewall for [https://en.wikipedia.org/wiki/Session_Initiation_Protocol SIP (Session Initiation Protocol)] networks, SIP being the most popular protocol that enables session control in computer communication networks. It is usually not very easy to find data sets in domains that incorparate features that may violate user privacy. Therefore, to mimic the traffic on a SIP network, we built boun-sim: a probabilistic SIP network simulation system, which simply initiates calls between a number of users in real-time. 
