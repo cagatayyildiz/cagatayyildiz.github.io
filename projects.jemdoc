@@ -1,9 +1,9 @@
 # jemdoc: menu{MENU}{projects.html}, nofooter
 = Projects
 
-Below are the projects I have been working on in the last two years:
+Below are the projects I have worked on:
 
-== Bayesian Multiple Change Point Model for DDoS Detection in SIP Networks (2015-...) *\[[html/Bayesian_Change_Point_Model.html html]\]* *\[[https://github.com/cagatayyildiz/bayesian/blob/master/Bayesian_Change_Point_Model.ipynb notebook]\]*
+== Bayesian Multiple Change Point Model for DDoS Detection in SIP Networks (2015-2017) *\[[https://github.com/cagatayyildiz/bayesian/blob/master/Bayesian_Change_Point_Model.ipynb notebook]\]*
 The goal in this project is to build a firewall for [https://en.wikipedia.org/wiki/Session_Initiation_Protocol SIP (Session Initiation Protocol)] networks. SIP is currently the most popular protocol that enables session control in computer communication networks and therefore, SIP servers have become targets of various attacks, such as [https://en.wikipedia.org/wiki/Denial-of-service_attack DDoS (Distributed Denial of Service)] attacks. DDoS attacks usually result in an abrupt change in the network traffic. 
 
 To detect such changes, we built a *Bayesian multiple change point model*, whose input is a set of features extracted from target computer's network traffic. The observation at time $t$, $x_t$, is assumed to be a random variable generated from a multinomial distribution with an unknown parameter $\pi_t$. At change points, or when $r_t=1$, $\pi_t$ is reset to a new value; otherwise, it keeps its value unchanged. Considering all together, the generative model of BCPM can be expressed as follows:
@@ -12,16 +12,6 @@ To detect such changes, we built a *Bayesian multiple change point model*, whose
 {}{img_left}{images/bcpm.png}{Graphical Model for BCPM}{500}{200}
 ~~~
 
-\(
-  	\begin{array}{ll}
-  		\pi_0  &\sim p(\pi_0) \\
-		r_1  &\sim p(r_1) \\
-		r_t  &\sim p(r_t|r_{t-1}) \\
-		\pi_t  &\sim p(\pi_t|r_t,\pi_{t-1}) \\
-		x_t  &\sim p(x_t|r_t,\pi_t)
-	\end{array}
-\)
-\n
 
 In the model, deciding whether a change has occurred at time $t$ is tantamount to calculating the posterior probability of $r_t$. This can be done by writing the forward recursions ($\alpha_{t|t}(r_t, \pi_t) = p(r_t, \pi_t, x_{1:t})$) and integrating $\pi_t$ out. If the task is not online, the posterior can be calculated conditioned on the full history of observations. When the reset model is the conjugate prior of the observation model, inference task becomes tractable. Gamma-Poisson model for one dimensional observations or Dirichlet-Multinomial model when observations are of higher orders can be useful. Of course, it is also possible to combine those two models in a single model, which we investigate in a paper (to-be-published). 
 
@@ -64,7 +54,7 @@ The graphical model for $2^{nd}$ order MMHMM is given above. In this model deman
 
 Here, $p(s_t)$ is a $K$ dimensional probability vector that weights the transitions and transitions with different orders are governed by different matrices. In general, transition matrix for order $k$ is denoted as $p(x_t|x_{t-k},s_t=k)$. If $x_t$ can take $N$ different values, this mixture model brings state space from an explosion -$O(N^{K+1})$ parameters- to a reasonable state with $O(KN^2)$ parameters. We finally have an observation probability matrix with $O(NM)$ parameters, if the number of observations is $M$. 
 
-Other than inference, we wanted to learn the model parameters that best fit our dataset. So, we derived EM updates for parameter learning. To sample from posterior distributions, I used *Gibbs samplers*, *particle filters* and *Metropolis-Hastings algorithm* as the state space is so large (and I took the [https://dl.dropboxusercontent.com/u/9787379/cmpe58n/index.html Monte Carlo Methods] course in the meantime). 
+Other than inference, we wanted to learn the model parameters that best fit our dataset. So, we derived EM updates for parameter learning. To sample from posterior distributions, I used Gibbs samplers, particle filters and Metropolis-Hastings algorithm as the state space is so large (and I took the [https://dl.dropboxusercontent.com/u/9787379/cmpe58n/index.html Monte Carlo Methods] course in the meantime). 
 
 The output of this work was [pdf/mmhmm-poster.pdf this poster] and I have not been able to revisit and extend my work for a year or so. Yet, I am planning to implement exact EM updates with reduced time complexity and hopefully update this section:)
 
