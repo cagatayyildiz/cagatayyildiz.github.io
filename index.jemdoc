@@ -2,50 +2,39 @@
 ==Cagatay Yildiz 
 
 ~~~
-{}{img_left}{images/me.jpg}{cagatay yildiz}{111}{170}{http://cagatayyildiz.github.io}
-M.S. Student and T.A. at [http://www.cmpe.boun.edu.tr/ Bogazici University Computer Engineering Department] \n 
-A member of [http://www.cmpe.boun.edu.tr/pilab/doku.php Perceptual Intelligence Laboratory (PILAB)] \n
-Department of Computer Engineering, Bogazici University, 34342 Bebek, Istanbul, Turkey \n
-Phone: \+90 212 359 4523 \n
-Fax: \+90 212 287 2461 \n
-E-mail: cagatay.yildiz1 \[at\] boun \[DOT\] edu \[DOT\] tr \n
+{}{img_left}{images/me.jpg}{cagatay yildiz}{111}{170}{http://cagatayyildiz.github.io} \n 
+Doctoral Candidate at [http://cs.aalto.fi/en/ Aalto University, Department of Computer Science] \n 
+A member of [http://research.cs.aalto.fi/csb/ Computational Systems Biology Research Group] \n
+Former MSc Student and TA at [http://www.cmpe.boun.edu.tr/ Computer Engineering Department, Bogazici University] \n 
+E-mail: cagatay.yildiz \[at\] aalto \[DOT\] fi \[DOT\] \n
  \[[https://github.com/cagatayyildiz github\]], \[[https://twitter.com/CgtyYldz twitter\]]
 ~~~
 
 
 == About me
-I graduated from [http://ankarafenlisesi.meb.k12.tr/ Ankara Science High School] in 2009 and received B.S. degree from [http://www.cmpe.boun.edu.tr/ Bogazici University Computer Engineering Department] in 2014 with 3.52/4.00 GPA. I am currently a Master's degree student supervised by [http://www.cmpe.boun.edu.tr/~cemgil  Assoc. Prof. Ali Taylan Cemgil] (expected graduation in June 2017) and teaching assistant at the same department. 
-
+I graduated from [http://ankarafenlisesi.meb.k12.tr/ Ankara Science High School] in 2009 and received BSc and MSc degrees from [http://www.cmpe.boun.edu.tr/ Bogazici University Computer Engineering Department] in 2014 and 2017. I am currently a doctoral candidate under the supervision of [https://users.ics.aalto.fi/harrila/  Assoc. Prof. Harri Lähdesmäki] since September 2017.
 
 == Research
 My research interests include 
-- Bayesian Statistics  
-- Machine Learning
+- Gaussian Processes
+- Stochastic Quasi Newton
 - Change Point Models
-- Time Series Analysis
 
 My CV is [pdf/CV.pdf here].
 
-My M.Sc. thesis is [https://www.dropbox.com/s/pvyphja2k4usmmd/thesis.pdf?dl=0 here]. 
+My M.Sc. thesis is [pdf/msc_thesis.pdf here]. 
 
 Details regarding my research are [projects.html here]. \n
 
 
-== Publications 
-=== Journal Papers
-- Kurt, B.; Yıldız, Ç.; Ceritli, T. Y.;  Sankur, B.; & Cemgil, A.T. (2016), “A Bayesian Change Point Model for Detecting SIP-based DDoS Attacks”, Digital Signal Processing, 2016 \[submitted\]
-- Yıldız, Ç.; Kurt, B.; Ceritli, T. Y.;  Sankur, B.; & Cemgil, A.T. (2016), "A Real-Time SIP Network Simulation and Monitoring System", SoftwareX, (2016) \[accepted\]
-=== International Conference
-- Yıldız, Ç.; Semerci, M.; Ceritli, T.Y.; Kurt, B.; Cemgil, A.T. & Sankur, B. (2016), ’Change Point Detection for Monitoring SIP Networks’, European Conference on Networks and Communications. \[ [pdf/eucnc.pdf pdf] \]
-=== National Conference
-- Yıldız, Ç​ .; Bingöl, O.H.; Irim, G.; Aktekin, B.; & Aykut-Bingöl, C. (2017), ’A Bayesian Change Point Model for Epileptic Seizure Detection’, IEEE Singal Processing and Communications Applications. \[ [pdf/epilepsi.pdf pdf] \]
-- Yıldız, Ç..; Ceritli, T.Y.; Kurt, B.; Sankur, B.; & Cemgil, A.T. (2016), ’Bayesçi Çoklu Değişim Noktası Modeliyle VoIP Ağlarda Saldırı Tespiti’, IEEE Singal Processing and Communications Applications. \[ [pdf/bayesci-coklu-degisim.pdf pdf] \]
-- Kurt, B.; Yıldız, Ç..; Ceritli, T.Y.; Yamaç, M.; Semerci, M.; Sankur, B.; & Cemgil, A.T. (2016), ’Olasılıksal SIP Ağı Benzetim Sistemi’, IEEE Singal Processing and Communications Applications. \[ [pdf/olasiliksal-sip-agi.pdf pdf] \]
-=== Workshop
-- Ceritli, T.Y.; Kurt, B.; Yıldız, Ç.; Sankur, B.; & Cemgil, A.T. (2016), ‘A Dictionary Learning Based Anomaly Detection Method for Network Traffic Data’, International Conference on Machine Learning (ICML) Anomaly Detection Workshop. \[ [pdf/a-dictionary-learning-based.pdf pdf] \]
-=== Technical Report
-- Yıldız, Ç.; Kurt, B.; Ceritli, T.Y.; Cemgil, A.T. & Sankur, B. (2016), ‘BOUN-SIM API Reference’ \[ [https://github.com/cagatayyildiz/boun-sim/ code] \] \[ [https://github.com/cagatayyildiz/boun-sim/blob/master/boun-sim-api.pdf pdf] \]
+== Publications (reverse chronologically)
 
-
-== Teaching
-I have been a teaching assitant at Bogazici University sine January, 2015. Depending on how hard the position is, assistans are assigned to one or two courses. So far, I have assisted Introduction to Object Oriented Programming (twice) and Data Structures and Algorithm courses. Plus, I participated in a [http://www.stanford-bogazici.com/ summer camp], where we taught high school students how to program in Java.
+- Heinonen M, *Yıldız Ç*, Mannerström H, Intosalmi J, & Lähdesmäki H. (2018), ‘Learning unknown ODE models with Gaussian processes’, International Conference on Machine Learning \[[https://arxiv.org/pdf/1803.04303.pdf pdf]\]
+- Simsekli U, *Yıldız Ç*, Nguyen T, Cemgil A.T., & Richard, G. (2018), ‘Asynchronous Stochastic Quasi-Newton MCMC for Non-Convex Optimization’,  International Conference on Machine Learning \[accepted\]
+- *Yıldız Ç*, Bingöl O.H., Irim G, Aktekin B, & Aykut-Bingöl C. (2017), ‘A Bayesian Change Point Model for Epileptic Seizure Detection’, IEEE Singal Processing and Communications Applications. \[[pdf/epilepsy.pdf pdf]\]
+- Kurt B, *Yıldız Ç*, Ceritli T. Y.,  Sankur B, & Cemgil A.T. (2017), ‘A Bayesian Change Point Model for Detecting SIP-based DDoS Attacks’, Digital Signal Processing \[[https://www.sciencedirect.com/science/article/pii/S1051200417302361?via%3Dihub pdf]\]
+- *Yıldız Ç*, Kurt B, Ceritli T. Y.,  Sankur B, & Cemgil A.T. (2017), ‘A Real-Time SIP Network Simulation and Monitoring System’, SoftwareX \[[https://www.sciencedirect.com/science/article/pii/S2352711017300614 pdf]\]
+- *Yıldız Ç*, Semerci M, Ceritli T.Y, Kurt B, Cemgil A.T. & Sankur B. (2016), ‘Change Point Detection for Monitoring SIP Networks’, European Conference on Networks and Communications. \[[pdf/eucnc.pdf pdf]\]
+- Ceritli T.Y, Kurt B, *Yıldız Ç*, Sankur B, & Cemgil A.T. (2016), ‘A Dictionary Learning Based Anomaly Detection Method for Network Traffic Data’, International Conference on Machine Learning (ICML) Anomaly Detection Workshop. \[[pdf/a-dictionary-learning-based.pdf pdf]\]
+- *Yıldız Ç*, Ceritli T.Y, Kurt B, Sankur B, & Cemgil A.T. (2016), ‘Bayesçi Çoklu Değişim Noktası Modeliyle VoIP Ağlarda Saldırı Tespiti’, IEEE Singal Processing and Communications Applications. \[[pdf/bayesci-coklu-degisim.pdf pdf]\]
+- Kurt B, *Yıldız Ç*, Ceritli T.Y, Yamaç M, Semerci M, Sankur B, & Cemgil, A.T. (2016), ‘Olasılıksal SIP Ağı Benzetim Sistemi’, IEEE Singal Processing and Communications Applications. \[[pdf/olasiliksal-sip-agi.pdf pdf]\]

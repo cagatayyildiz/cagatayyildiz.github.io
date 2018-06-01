@@ -1,6 +1,9 @@
 # jemdoc: menu{MENU}{software.html}, nofooter  
 = Software
 
+== Nonparametric Ordinary Differential Equations \[[https://github.com/cagatayyildiz/npode code]\]
+This repository contains a MATLAB implementation of npODE - a nonparametric model for learning unknown ordinary differential equations. Our paper is presented in ICML 2018. Here is the [https://arxiv.org/abs/1803.04303 arxiv link] to the paper.
+
 == PML: PILAB Matrix and Machine Learning Library \[[https://github.com/pilab-sigma/pml code]\]
 In [http://www2.cmpe.boun.edu.tr/pilab/doku.php PILAB], we mainly use Matlab and Python in our research projects. These languages are great to build prototype of whatever computation model in mind. When it comes to conducting experiments with huge data sets, however, it usually takes hours or days to run a single experiment. This is why my lab-mate [http://bariskurt.com/ Barış Kurt] started a C\+\+ project for developing linear algebra and machine learning applications that will speed up C\+\+ coding. Barış has implemented most parts of the library, my contribution to pml is +Tensor3D+ class.
 
