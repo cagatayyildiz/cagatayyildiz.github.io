@@ -28,6 +28,7 @@ Details regarding my research are [projects.html here]. \n
 
 == Publications (reverse chronologically)
 
+- *Yıldız Ç*, Heinonen M, Mannerström H, Intosalmi J, & Lähdesmäki H. (2018), ‘Learning Stochastic Differential Equations With Gaussian Processes Without Gradient Matching’, IEEE International Workshop on Machine Learning for Signal Processing \[[https://arxiv.org/pdf/1807.05748.pdf pdf]\]
 - Heinonen M, *Yıldız Ç*, Mannerström H, Intosalmi J, & Lähdesmäki H. (2018), ‘Learning unknown ODE models with Gaussian processes’, International Conference on Machine Learning \[[https://arxiv.org/pdf/1803.04303.pdf pdf]\]
 - Simsekli U, *Yıldız Ç*, Nguyen T, Cemgil A.T., & Richard, G. (2018), ‘Asynchronous Stochastic Quasi-Newton MCMC for Non-Convex Optimization’,  International Conference on Machine Learning \[[https://arxiv.org/pdf/1806.02617.pdf pdf]\]
 - *Yıldız Ç*, Bingöl O.H., Irim G, Aktekin B, & Aykut-Bingöl C. (2017), ‘A Bayesian Change Point Model for Epileptic Seizure Detection’, IEEE Singal Processing and Communications Applications. \[[pdf/epilepsy.pdf pdf]\]
