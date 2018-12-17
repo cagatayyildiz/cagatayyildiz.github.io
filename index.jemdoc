@@ -1,12 +1,12 @@
-# jemdoc: menu{MENU}{index.html}, nofooter  
+# jemdoc: menu{MENU}{index.html}, nofooter
 ==Çağatay Yıldız
 
 ~~~
-{}{img_left}{images/me.jpg}{cagatay yildiz}{124}{216}{http://cagatayyildiz.github.io} \n 
-Doctoral Candidate at [http://cs.aalto.fi/en/ Aalto University, Department of Computer Science] since September 2017 \n 
+{}{img_left}{images/me.jpg}{cagatay yildiz}{124}{216}{http://cagatayyildiz.github.io} \n
+Doctoral Candidate at [http://cs.aalto.fi/en/ Aalto University, Department of Computer Science] since September 2017 \n
 Working under the supervision of [https://users.ics.aalto.fi/harrila/  Assoc. Prof. Harri Lähdesmäki] \n
 A member of [http://research.cs.aalto.fi/csb/ Computational Systems Biology Research Group] \n  \n
-Received MSc (2017) and BSc (2014) degrees from [http://www.cmpe.boun.edu.tr/ Computer Engineering Department, Bogazici University] \n 
+Received MSc (2017) and BSc (2014) degrees from [http://www.cmpe.boun.edu.tr/ Computer Engineering Department, Bogazici University] \n
 Worked under the supervision of [https://www.cmpe.boun.edu.tr/~cemgil/  Assoc. Prof. Ali Taylan Cemgil] \n
 [http://ankarafenlisesi.meb.k12.tr/ Ankara Science High School] graduate \n \n
 E-mail: cagatay.yildiz \[at\] aalto \[dot\] fi \n
@@ -14,20 +14,22 @@ E-mail: cagatay.yildiz \[at\] aalto \[dot\] fi \n
 ~~~
 
 == Research
-My research interests include 
+My research interests include
+- Variational Autoencoders
 - Gaussian Processes
 - Stochastic Quasi Newton
-- Change Point Models
+- Graphical Models
 
-My CV is [pdf/CV.pdf here].
+My CV is [pdf/CV_Cagatay_Yildiz.pdf here].
 
-My M.Sc. thesis is [pdf/msc_thesis.pdf here]. 
+My M.Sc. thesis is [pdf/msc_thesis.pdf here].
 
 Details regarding my research are [projects.html here]. \n
 
 
 == Publications (reverse chronologically)
 
+- *Yıldız Ç*, Heinonen M & Lähdesmäki H. (2018), ‘A Nonparametric Spatio-temporal SDE Model’, NIPS 2018 Spatiotemporal Workshop \[[https://openreview.net/pdf?id=HJzoRCKwjQ pdf]\]
 - *Yıldız Ç*, Heinonen M, Mannerström H, Intosalmi J, & Lähdesmäki H. (2018), ‘Learning Stochastic Differential Equations With Gaussian Processes Without Gradient Matching’, IEEE International Workshop on Machine Learning for Signal Processing \[[https://arxiv.org/pdf/1807.05748.pdf pdf]\]
 - Heinonen M, *Yıldız Ç*, Mannerström H, Intosalmi J, & Lähdesmäki H. (2018), ‘Learning unknown ODE models with Gaussian processes’, International Conference on Machine Learning \[[https://arxiv.org/pdf/1803.04303.pdf pdf]\]
 - Simsekli U, *Yıldız Ç*, Nguyen T, Cemgil A.T., & Richard, G. (2018), ‘Asynchronous Stochastic Quasi-Newton MCMC for Non-Convex Optimization’,  International Conference on Machine Learning \[[https://arxiv.org/pdf/1806.02617.pdf pdf]\]
