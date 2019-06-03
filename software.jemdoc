@@ -1,7 +1,10 @@
 # jemdoc: menu{MENU}{software.html}, nofooter  
 = Software
 
-== Nonparametric Ordinary Differential Equations \[[https://github.com/cagatayyildiz/npode code]\]
+== Nonparametric Ordinary Differential Equations \[[https://github.com/cagatayyildiz/npde code]\]
+TensorFlow implementation of the library described below. Contains both GP-based ODEs and SDEs.
+
+== \[old\] Nonparametric Ordinary Differential Equations \[[https://github.com/cagatayyildiz/npode code]\]
 This repository contains a MATLAB implementation of npODE - a nonparametric model for learning unknown ordinary differential equations. Our paper is presented in ICML 2018. Here is the [https://arxiv.org/abs/1803.04303 arxiv link] to the paper.
 
 == PML: PILAB Matrix and Machine Learning Library \[[https://github.com/pilab-sigma/pml code]\]

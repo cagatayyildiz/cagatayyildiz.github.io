@@ -1,12 +1,7 @@
 # jemdoc: menu{MENU}{projects.html}, nofooter
-= Projects
+= Before PhD
 
-Below are the projects I have worked on:
-
-
-== Learning Unknown ODE Models with Gaussian processes (2017-2018) *\[[https://arxiv.org/pdf/1803.04303.pdf ICML 2018, pdf]\]*
-*Abstract*: In conventional ODE modelling coefficients of an equation driving the system state forward in time are estimated. However, for many complex systems it is practically impossible to determTne the equations or interactions governing the underlying dynamics. In these settings, parametric ODE model cannot be formulated. Here, we overcome this issue by introducing a novel paradigm of nonparametric ODE modeling that can learn the underlying dynamics of arbitrary continuous-time systems without prior knowledge. We propose to learn non-linear, unknown differential functions from state observations using Gaussian process vector fields within the exact ODE formalism. We demonstrate the model's capabilities to infer dynamics from sparse data and to simulate the system forward into future.
-
+Below are the projects I worked on before my PhD:
 
 == Asynchronous Stochastic Quasi-Newton MCMC for Non-Convex Optimization (2017 Summer) *\[[https://icml.cc/Conferences/2018/AcceptedPapersInitial ICML 2018, pdf]\]*
 *Abstract*: Recent studies have illustrated that stochastic gradient Markov Chain Monte Carlo techniques have a strong potential in non-convex optimization, where local and global convergence guarantees can be shown under certain conditions. By building up on this recent theory, in this study, we develop an asynchronous-parallel stochastic L-BFGS algorithm for non-convex optimization. The proposed algorithm is suitable for both distributed and shared-memory settings. We provide formal theoretical analysis and show that the proposed method achieves an ergodic convergence rate of O(1/√N) (N being the total number of iterations) and it can achieve a linear speedup under certain conditions. We perform several experiments on both synthetic and real datasets. The results support our theory and show that the proposed algorithm provides a significant speedup over the recently proposed synchronous distributed L-BFGS algorithm.

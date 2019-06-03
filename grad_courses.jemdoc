@@ -1,7 +1,13 @@
 # jemdoc: menu{MENU}{grad_courses.html}, nofooter  
-= Grad Courses that I Took
+= Grad Courses Taken
 
 == Aalto University
+
+- Applied Stochastic Differential Equations 
+
+- Numerical matrix computations 
+
+- Gaussian processes - theory and applications 
 
 - [https://mycourses.aalto.fi/course/view.php?id=19524 Special Course on Latent Variable Modeling and Bayesian Matrix Factorization], by /[https://research.aalto.fi/portal/xiangju.qin.html Xiangju Qin]/ and /[https://users.ics.aalto.fi/blomstp2/ Paul Blomstedt]/: Latent variable models (LVMs) are powerful and flexible tools for learning hidden structure underlying data objects in an unsupervised fashion. They provide a compact, meaningful representation of the inputs. Bayesian matrix factorization is a general class of LVMs which factorizes a data matrix into a product of two low-rank matrices. LVMs (and BMF) can be used for many purposes in machine learning, such as clustering, pattern recognition, dimensionality reduction, feature extraction, and predicting missing values. Latent variable modeling is a very broad research topic. This seminar course provides a gateway to this interesting topic through an introductory lecture for several widely used LVMs (e.g. factor analysis and multi-view learning) and basic principles of the methods as well as discussion of more recent advances in the field.
 
