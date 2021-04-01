@@ -23,3 +23,5 @@ I'm trying to understand how continuous-time models can be used in time-series l
 - Neural ordinary differential equations
 - Generative models
 - Reinforcement learning
+
+My name is super easy to pronounce: [chaa-tai](https://forvo.com/word/%C3%A7a%C4%9Fatay/){:target="\_blank"}.
