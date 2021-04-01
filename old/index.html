@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta name="generator" content="jemdoc, see http://jemdoc.jaboc.net/" />
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<link rel="stylesheet" href="jemdoc.css" type="text/css" />
+<title>Çağatay Yıldız</title>
+</head>
+<body>
+<table summary="Table for page layout." id="tlayout">
+<tr valign="top">
+<td id="layout-menu">
+<div class="menu-item"><a href="index.html" class="current">Home</a></div>
+<div class="menu-category">Academic</div>
+<div class="menu-item"><a href="projects.html">Before&nbsp;PhD</a></div>
+<div class="menu-item"><a href="software.html">Software</a></div>
+<div class="menu-item"><a href="grad_courses.html">Grad&nbsp;Courses</a></div>
+<div class="menu-category">Personal</div>
+<div class="menu-item"><a href="good_readings.html">guzel&nbsp;okumalar</a></div>
+<div class="menu-item"><a href="reading_notes.html">okuma&nbsp;notlari</a></div>
+</td>
+<td id="layout-content">
+<div id="toptitle">
+<h1>Çağatay Yıldız</h1>
+</div>
+<table class="imgtable"><tr><td>
+<a href="http://cagatayyildiz.github.io"><img src="images/me.jpg" alt="cagatay yildiz" width="124px" height="216px" /></a>&nbsp;</td>
+<td align="left"><p>Doctoral Candidate at <a href="http://cs.aalto.fi/en/">Aalto University, Department of Computer Science</a> since September 2017 <br />
+Working under the supervision of <a href="https://users.ics.aalto.fi/harrila/">Assoc. Prof. Harri Lähdesmäki</a> at <a href="http://research.cs.aalto.fi/csb/">Computational Systems Biology Research Group</a> <br />
+Deep generative models, Gaussian processes, Stochastic quasi-Newton methods, Graphical models <br /> <br />
+Received MSc (2017) and BSc (2014) degrees from <a href="http://www.cmpe.boun.edu.tr/">Computer Engineering Department, Bogazici University</a> <br />
+Worked under the supervision of <a href="https://www.cmpe.boun.edu.tr/~cemgil/">Assoc. Prof. Ali Taylan Cemgil</a> <br />
+<a href="http://ankarafenlisesi.meb.k12.tr/">Ankara Science High School</a> graduate <br /> <br />
+E-mail: cagatay.yildiz [at] aalto [dot] fi <br />
+My name is super easy to pronounce: <a href="https://translate.google.com/#view=home&amp;op=translate&amp;sl=tr&amp;tl=en&amp;text=chaa%20tai">chaa-tai</a> <br />
+[<a href="https://github.com/cagatayyildiz">github]</a>  [<a href="https://scholar.google.fi/citations?user=dNloPBUAAAAJ&amp;hl=en">google scholar]</a>  [<a href="https://twitter.com/CgtyYldz">twitter]</a> [<a href="pdf/CV_Cagatay_Yildiz.pdf">CV]</a> [<a href="pdf/msc_thesis.pdf">MSc thesis]</a> <br /></p>
+</td></tr></table>
+<h1>Selected papers</h1>
+<h3>ODE2VAE: Deep Generative Second Order ODEs with Bayesian Neural Networks <b>[<a href="https://arxiv.org/pdf/1905.10994.pdf">NeurIPS 2019, pdf</a>], [<a href="https://www.youtube.com/watch?v=PscfJTyELbQ&amp;t=3s">3-min video</a>] [<a href="https://www.youtube.com/watch?v=9Jd4_8hyS-8&amp;feature=youtu.be">talk</a>]</b></h3>
+<p>We present Ordinary Differential Equation Variational Auto-Encoder (ODE2VAE), a latent second order ODE model for high-dimensional sequential data. Leveraging the advances in deep generative models, ODE2VAE can simultaneously learn the embedding of high dimensional trajectories and infer arbitrarily complex continuous-time latent dynamics. Our model explicitly decomposes the latent space into momentum and position components and solves a second order ODE system, which is in contrast to recurrent neural network (RNN) based time series models and recently proposed black-box ODE techniques. In order to account for uncertainty, we propose probabilistic latent ODE dynamics parameterized by deep Bayesian neural networks. We demonstrate our approach on motion capture, image rotation and bouncing balls datasets. We achieve state-of-the-art performance in long term motion prediction and imputation tasks.</p>
+<h3>Learning Stochastic Differential Equations With Gaussian Processes Without Gradient Matching <b>[<a href="https://arxiv.org/pdf/1807.05748.pdf">IEEE MLSP 2018, pdf</a>]</b></h3>
+<p>We introduce a novel paradigm for learning non-parametric drift and diffusion functions for stochastic differential equation (SDE). The proposed model learns to simulate path distributions that match observations with non-uniform time increments and arbitrary sparseness, which is in contrast with gradient matching that does not optimize simulated responses. We formulate sensitivity equations for learning and demonstrate that our general stochastic distribution optimisation leads to robust and efficient learning of SDE systems</p>
+<h3>Learning Unknown ODE Models with Gaussian processes <b>[<a href="https://arxiv.org/pdf/1803.04303.pdf">ICML 2018, pdf</a>]</b></h3>
+<p>In conventional ODE modelling coefficients of an equation driving the system state forward in time are estimated. However, for many complex systems it is practically impossible to determine the equations or interactions governing the underlying dynamics. In these settings, parametric ODE model cannot be formulated. Here, we overcome this issue by introducing a novel paradigm of nonparametric ODE modeling that can learn the underlying dynamics of arbitrary continuous-time systems without prior knowledge. We propose to learn non-linear, unknown differential functions from state observations using Gaussian process vector fields within the exact ODE formalism. We demonstrate the model's capabilities to infer dynamics from sparse data and to simulate the system forward into future.</p>
+<h3>Asynchronous Stochastic Quasi-Newton MCMC for Non-Convex Optimization <b>[<a href="https://icml.cc/Conferences/2018/AcceptedPapersInitial">ICML 2018, pdf</a>]</b></h3>
+<p>Recent studies have illustrated that stochastic gradient Markov Chain Monte Carlo techniques have a strong potential in non-convex optimization, where local and global convergence guarantees can be shown under certain conditions. By building up on this recent theory, in this study, we develop an asynchronous-parallel stochastic L-BFGS algorithm for non-convex optimization. The proposed algorithm is suitable for both distributed and shared-memory settings. We provide formal theoretical analysis and show that the proposed method achieves an ergodic convergence rate of O(1/√N) (N being the total number of iterations) and it can achieve a linear speedup under certain conditions. We perform several experiments on both synthetic and real datasets. The results support our theory and show that the proposed algorithm provides a significant speedup over the recently proposed synchronous distributed L-BFGS algorithm.</p>
+<h1>Publications (reverse chronologically)</h1>
+<ul>
+<li><p>[<a href="https://arxiv.org/pdf/1905.10994.pdf">pdf</a>] <b>ODE2VAE: Deep Generative Second Order ODEs with Bayesian Neural Networks</b>, NeurIPS 2019. Yıldız Ç, Heinonen M &amp; Lähdesmäki H. </p>
+</li>
+<li><p>[<a href="https://openreview.net/pdf?id=HJzoRCKwjQ">pdf</a>] <b>A Nonparametric Spatio-temporal SDE Model</b>, NIPS 2018 Spatiotemporal Workshop. Yıldız Ç, Heinonen M &amp; Lähdesmäki H. </p>
+</li>
+<li><p>[<a href="https://arxiv.org/pdf/1807.05748.pdf">pdf</a>] <b>Learning Stochastic Differential Equations With Gaussian Processes Without Gradient Matching</b>, IEEE MLSP 2018. Yıldız Ç, Heinonen M, Mannerström H, Intosalmi J, &amp; Lähdesmäki H. </p>
+</li>
+<li><p>[<a href="https://arxiv.org/pdf/1803.04303.pdf">pdf</a>] <b>Learning unknown ODE models with Gaussian processes</b>, ICML 2018. Heinonen M, Yıldız Ç, Mannerström H, Intosalmi J, &amp; Lähdesmäki H. </p>
+</li>
+<li><p>[<a href="https://arxiv.org/pdf/1806.02617.pdf">pdf</a>] <b>Asynchronous Stochastic Quasi-Newton MCMC for Non-Convex Optimization</b>,  ICML 2018. Simsekli U, Yıldız Ç, Nguyen T, Cemgil A.T., &amp; Richard, G. </p>
+</li>
+<li><p>[<a href="https://www.sciencedirect.com/science/article/pii/S1051200417302361?via%3Dihub">pdf</a>] <b>A Bayesian Change Point Model for Detecting SIP-based DDoS Attacks</b>, Digital Signal Processing 2018. Kurt B, Yıldız Ç, Ceritli T. Y.,  Sankur B, &amp; Cemgil A.T. </p>
+</li>
+<li><p>[<a href="pdf/epilepsy.pdf">pdf</a>] <b>A Bayesian Change Point Model for Epileptic Seizure Detection</b>, IEEE Singal Processing and Communications Applications 2017. Yıldız Ç, Bingöl O.H., Irim G, Aktekin B, &amp; Aykut-Bingöl C. </p>
+</li>
+<li><p>[<a href="https://www.sciencedirect.com/science/article/pii/S2352711017300614">pdf</a>] <b>A Real-Time SIP Network Simulation and Monitoring System</b>, SoftwareX 2017. Yıldız Ç, Kurt B, Ceritli T. Y.,  Sankur B, &amp; Cemgil A.T. </p>
+</li>
+<li><p>[<a href="pdf/eucnc.pdf">pdf</a>] <b>Change Point Detection for Monitoring SIP Networks</b>, European Conference on Networks and Communications 2016. Yıldız Ç, Semerci M, Ceritli T.Y, Kurt B, Cemgil A.T. &amp; Sankur B.  </p>
+</li>
+<li><p>[<a href="pdf/a-dictionary-learning-based.pdf">pdf</a>] <b>A Dictionary Learning Based Anomaly Detection Method for Network Traffic Data</b>, ICML Anomaly Detection Workshop 2016. Ceritli T.Y, Kurt B, Yıldız Ç, Sankur B, &amp; Cemgil A.T.  </p>
+</li>
+<li><p>[<a href="pdf/bayesci-coklu-degisim.pdf">pdf</a>] <b>Bayesçi Çoklu Değişim Noktası Modeliyle VoIP Ağlarda Saldırı Tespiti</b>, IEEE Singal Processing and Communications Applications 2016. Yıldız Ç, Ceritli T.Y, Kurt B, Sankur B, &amp; Cemgil A.T. </p>
+</li>
+<li><p>[<a href="pdf/olasiliksal-sip-agi.pdf">pdf</a>] <b>Olasılıksal SIP Ağı Benzetim Sistemi</b>, IEEE Singal Processing and Communications Applications 2016. Kurt B, Yıldız Ç, Ceritli T.Y, Yamaç M, Semerci M, Sankur B, &amp; Cemgil, A.T. </p>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</body>
+</html>

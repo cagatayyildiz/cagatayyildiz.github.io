@@ -1,0 +1,25 @@
+# jemdoc: menu{MENU}{software.html}, nofooter  
+= Software
+
+== Nonparametric Ordinary Differential Equations \[[https://github.com/cagatayyildiz/npde code]\]
+TensorFlow implementation of the library described below. Contains both GP-based ODEs and SDEs.
+
+== \[old\] Nonparametric Ordinary Differential Equations \[[https://github.com/cagatayyildiz/npode code]\]
+This repository contains a MATLAB implementation of npODE - a nonparametric model for learning unknown ordinary differential equations. Our paper is presented in ICML 2018. Here is the [https://arxiv.org/abs/1803.04303 arxiv link] to the paper.
+
+== PML: PILAB Matrix and Machine Learning Library \[[https://github.com/pilab-sigma/pml code]\]
+In [http://www2.cmpe.boun.edu.tr/pilab/doku.php PILAB], we mainly use Matlab and Python in our research projects. These languages are great to build prototype of whatever computation model in mind. When it comes to conducting experiments with huge data sets, however, it usually takes hours or days to run a single experiment. This is why my lab-mate [http://bariskurt.com/ Barış Kurt] started a C\+\+ project for developing linear algebra and machine learning applications that will speed up C\+\+ coding. Barış has implemented most parts of the library, my contribution to pml is +Tensor3D+ class.
+
+At some point in my Master's, I studied in hidden Markov models and then implemented stuff such as forward&backward recursions, correction smoother, recursive smoother, batch&online learning algorihms in C\+\+ using pml. The module is currently under pml, named as +pml\_hmm.hpp+. You can clone the repo and start enjoying a fast implementation of HMM.
+
+== Jupyter Notebook for Bayesian Change Point Model \[[https://github.com/pilab-sigma/bcpm code&derivations]\]
+The main focus of my thesis is Bayesian change point model. I have written two jupyter notebooks, where you can find the generative model, a few toy examples and python implementation of the model in the link given above. With python3.5 and necessary libraries installed, you can run the inference algorithm for your tasks. You may also have a look at C\+\+ implementation of the model (also in the link next to title). Our C\+\+ library is much more generic and very easy to extend.
+
+== boun-sim: A Real-Time SIP Traffic Generator \[[https://github.com/cagatayyildiz/boun-sim code&documentation]\]
+The goal in one of my projects is to build a firewall for [https://en.wikipedia.org/wiki/Session_Initiation_Protocol SIP (Session Initiation Protocol)] networks, SIP being the most popular protocol that enables session control in computer communication networks. It is usually not very easy to find data sets in domains that incorparate features that may violate user privacy. Therefore, to mimic the traffic on a SIP network, we built boun-sim: a probabilistic SIP network simulation system, which simply initiates calls between a number of users in real-time. 
+
+== buyemek: An Android Application for Student Cafeteria Menu \[[https://github.com/cagatayyildiz/BUyemek code]\] \[[https://play.google.com/store/apps/details?id=com.cmpe.boun.buyemek app]\]
+As a frequent visitor of the student cafeteria in [www.boun.edu.tr Bogazici University], I check the cafeteria menu twice a day. At the same time, I wondered what mobile app codes looks like. So, I decided to learn Android programming by building an app that just lists the lunch and dinner menu of the day. The funny thing is it took 2-3 days to write the program and I have not been able to find a way to parse the .pdf file that stores the monthly menu and I still /manually/ update the database my app connects to ¯\\_(ツ)_/¯
+
+== şekerim(MySugar): An Android Application for Diabetics \[[http://www.hurriyetkampus.com/haberler/gundem/buyuk-odul-sekerim-in in the news]\]
+After learning Android programming, my high school friend Emre, who was a student at Istanbul Faculty of Medicine back then, mentioned about a competition where we were going to design and implement an Andorid app that improves the quality of life in people with diabetes. After a literature survey on the needs of the diabetic, we built and app that calculates nutrient intake and makes suggestions accordingly, gives life tips, reminds medicine, plots blood sugar level, sends messages to the doctor, etc. I have not opened the code yet, as it needs a lot of modification for compatibility.

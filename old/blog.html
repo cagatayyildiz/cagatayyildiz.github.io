@@ -1,0 +1,89 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta name="generator" content="jemdoc, see http://jemdoc.jaboc.net/" />
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<link rel="stylesheet" href="jemdoc.css" type="text/css" />
+<script src="https://cdn.jsdelivr.net/jquery/3.1.1/jquery.min.js"></script>
+<title>blog</title>
+ 	<style>
+      #clickableList>li>span{
+        display:none;
+      }
+    </style>
+    <script type="text/javascript">
+      $(document).ready(function(){
+        $("#clickableList>li>h2").click(function(olay){
+          var hedefimiz = $(olay.target);
+          x = hedefimiz;
+          if(hedefimiz.is("#clickableList>li>h2")){
+            hedefimiz.siblings("span").slideToggle();
+          }
+        });
+        $(document).keydown(function(olay){
+          if (olay.ctrlKey && olay.shiftKey){
+            if(olay.which === 88){  // X -> eXpand
+              olay.preventDefault();
+              $("#clickableList>li>span").slideDown();
+            }else if(olay.which === 90){ // Z -> collepZ (collapse)
+              olay.preventDefault();
+              $("#clickableList>li>span").slideUp();
+            }
+          }
+        });
+      });
+    </script>
+</head>
+<body>
+<table summary="Table for page layout." id="tlayout">
+<tr valign="top">
+<td id="layout-menu">
+<div class="menu-item"><a href="index.html">Home</a></div>
+<div class="menu-category">Academic</div>
+<div class="menu-item"><a href="projects.html">Projects</a></div>
+<div class="menu-item"><a href="software.html">Software</a></div>
+<div class="menu-item"><a href="msc_courses.html">MSc&nbsp;Courses</a></div>
+<div class="menu-category">Personal</div>
+<div class="menu-item"><a href="good_readings.html">guzel okumalar</a></div>
+<div class="menu-item"><a href="reading_notes.html">okuma notlari</a></div>
+<div class="menu-item"><a href="blog.html" class="current">blog</a></div>
+</td>
+<td id="layout-content">
+<div id="toptitle">
+<h1>blog</h1>
+</div>
+<p>This page is more like a personal one, where I just dump my thoughts on different topics. Some are related to my hobies and spare-time activities and some others are traces of my questionings. My previos blogging experiences were disaster, I hopefully keep updating this page.</p>
+
+        <ul id="clickableList">
+          	<li>
+				<h2>education</h2>
+				<span>
+					<p>Transition from high school to university is I suppose tough for everyone, especially if you are a student in Turkey. In Turkey, all students must take an exam, once called OSS, that eventually decides the universities one deserves to apply. The exam is organized by a govermental organization. It takes about 3 hours and all questions are multiple choice. Successful students typically start studying at least 1.5 years before the exam - it may go up to 3 years.</p>
+					<p>Many scholars question the exam: Does it really measure students&rsquo; level of knowledge? Is it really fair to sort students with an exam, in addition to a single score that is a function of high school grades? Also, questions in the exam can be ridicilous, very far away from being &ldquo;decent&rdquo; (I am not even mentioning &ldquo;quality&rdquo; questions). On the other hand, we have Turkey's facts: Turkey's Minister of Education can hardly keep his/her chair for 3-4 years (as of September 2016, he is the former Minister of Defence!!!), many children at the age of five of six cannot even find a school to attend, the population of the country is much greater than the resources dedicated to the education, etc. </p>
+					<p>I have kept thinking about those questions and facts and finally believed that we are not that bad overall. However, my standpoint has changed when I became a teaching assistant in my department. My first observation was that students are way too grade-oriented. For example, it is a nightmare to get them put some extra work, such as completing an assignment that is not to be graded. Their motivation have always been the grades - a few numbers that in my opinion don't really reflect how student is doing. Perhaps in connection with that, they typically focus on maximizing short term returns (a higher quiz grade, solving a question that gives them extra 10 points in the final, bonus parts in assignments, etc) and lack in seeing long term goals. I usually try to motivate them by giving real life examples -e.g., using a version control system is important because blablabla, you will not implement the copy constructor of this class in the project but most of the data structures I implement and you will implement require dynamic allocation, etc- but I don't really feel these examples are effective. In my opinion, the biggest problem in our education system is not whether everyone is at the school of their choice and that they deserve to be admitted. It is that eyes of our students are blurred by the numbers. They need to change this perspective in the college, which is undoubtedly very far away from easy.</p>
+				</span>
+			</li>
+          	<li>
+				<h2>basketball</h2>
+				<span>
+					<p>My sport life prior to Ankara was all about soccer. Well, I guess this is the case for most of Turkish boys. The little problem with me playing soccer was I was too fat and usually outrun by every other player on the field. This is why I was always a goalkeeper. One day, I realized that I don't really have fun while waiting for the ball to get to the penalty area. So, I took a little break and started to play basketball.</p>
+					<p>Compared to soccer, physical characterics of basketball players are various. That's advantageous for sportsmen who are not very tall, or strong, or quick. A very typical example is <a href="https://en.wikipedia.org/wiki/Steve_Nash">Steve Nash</a>, a retired basketball player, and once my hero. He was twice named the most valuable player in NBA, at the times I started to enjoy basketball. The reason why I loved watching Nash playing was he -being a white, short, skinny point guard- has usually been the smallest player on the floor but at the same time, the most dominant one. Additionally, he was one of the most unselfish basketball players that I have ever watched. So despite his physical weaknesses, he found a way to succeed (actually named twice as the best of a season), and he did this with his teammates, by raising their level of basketball. This of course requires leadership skills, hard work, determination. Soon I realized that these were actually much bigger reasons for me to fall in love with Nash than his basketball. </p>
+					<p>Basketball of course means more than Nash for me. Basketball court is where I can get rid of stress, concentrate on a single goal, and relax at the end. If I have 3 final exams in 2 days, or trying to get my paper done before a strict deadline, or any other situtation involving a lot of stress, you can find me at the nearest basketball court:) It also helps me calm my mind and listen to my inner voice, especially if I am playing alone. So a life without basketball would be very hard for me - and indeed it was, when I suffered from two slipped discs on my back.</p>
+				</span>
+			</li>
+          	<li>
+				<h2>health</h2>
+				<span>
+					<p>I remember being very upset on the day that I underwent an MRI scan. Results indicated that I have two slipped disks and have to streghthen my back muscles. I was also given a set of back exercises as strong muscles relax the slipped region. So what did I do? I practiced as hard as I could do. Although I was not recommended at the stage, I started swimming and did ab exercises so that it takes less to get back to basketball. The result was disaster: My back muscles got strained and instead of carrying my upper body, they applied additional pressure on my spine. Long story short, I got annoyed, stopped exercising and decided to live with all my pain - as it was there no matter how hard I tried. But the problem was exactly this: I tried too hard. </p>
+					<p>A year later, my pain got so worse that I could not even sit on a chair and needed to lay down for a week. Then I have seen another doctor, who was about the same age as I was back then. So, he easily understood my distorted perspective on this back issue and first dealt with it. Once my mentality was fixed, healing turned out to be quite easy: I got my workout, exercised every day and saw the doctor twice a month. In each visit, he checked out how I am doing and intensified program accordingly. Two months later, he moderated my program and released me to the basketball court. The result? I have been playing my best basketbool ever since.</p>
+					<p>The key to the healing was actually the mental transformation. Once, I couldn't live with the idea of having slipped disks and wanted to compensate in the best possible manner, which resulted in more damage. Then I realized that the issue on my back is actually a part of me, my body, and my reality. Yeah, it is really sad to have those disks but I have got to accept this, revisit my daily activities, and maybe stop doing some of those. That's not the end of life, and actually we are all limited to what our body allows us to do: One may not shoot free throws well if hands are too big, could not usually jump high if joints are naturally weak, probably never plays basketball at the same level (maybe even cannot walk) if legs are broken, couldn't speak if born deaf.  Luckily, a very well-prepared set of exercise got me much better, even better than ever. But that does not mean I will never suffer from those disks, or any other injury. When your body is gone, you are gone. It's that simple</p>
+				</span>
+			</li>
+
+		<ul>
+</td>
+</tr>
+</table>
+</body>
+</html>

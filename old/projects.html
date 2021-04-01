@@ -1,0 +1,72 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta name="generator" content="jemdoc, see http://jemdoc.jaboc.net/" />
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<link rel="stylesheet" href="jemdoc.css" type="text/css" />
+<title>Before PhD</title>
+</head>
+<body>
+<table summary="Table for page layout." id="tlayout">
+<tr valign="top">
+<td id="layout-menu">
+<div class="menu-item"><a href="index.html">Home</a></div>
+<div class="menu-category">Academic</div>
+<div class="menu-item"><a href="projects.html" class="current">Before&nbsp;PhD</a></div>
+<div class="menu-item"><a href="software.html">Software</a></div>
+<div class="menu-item"><a href="grad_courses.html">Grad&nbsp;Courses</a></div>
+<div class="menu-category">Personal</div>
+<div class="menu-item"><a href="good_readings.html">guzel&nbsp;okumalar</a></div>
+<div class="menu-item"><a href="reading_notes.html">okuma&nbsp;notlari</a></div>
+</td>
+<td id="layout-content">
+<div id="toptitle">
+<h1>Before PhD</h1>
+</div>
+<p>Below are the projects I worked on before my PhD:</p>
+<h2>Asynchronous Stochastic Quasi-Newton MCMC for Non-Convex Optimization (2017 Summer) <b>[<a href="https://icml.cc/Conferences/2018/AcceptedPapersInitial">ICML 2018, pdf</a>]</b></h2>
+<p><b>Abstract</b>: Recent studies have illustrated that stochastic gradient Markov Chain Monte Carlo techniques have a strong potential in non-convex optimization, where local and global convergence guarantees can be shown under certain conditions. By building up on this recent theory, in this study, we develop an asynchronous-parallel stochastic L-BFGS algorithm for non-convex optimization. The proposed algorithm is suitable for both distributed and shared-memory settings. We provide formal theoretical analysis and show that the proposed method achieves an ergodic convergence rate of O(1/√N) (N being the total number of iterations) and it can achieve a linear speedup under certain conditions. We perform several experiments on both synthetic and real datasets. The results support our theory and show that the proposed algorithm provides a significant speedup over the recently proposed synchronous distributed L-BFGS algorithm.</p>
+<h2>Bayesian Multiple Change Point Model for DDoS Detection in SIP Networks (2015-2017) <b>[<a href="https://github.com/cagatayyildiz/bayesian/blob/master/Bayesian_Change_Point_Model.ipynb">notebook</a>, <a href="https://www.sciencedirect.com/science/article/pii/S1051200417302361?via%3Dihub">paper1</a>, <a href="https://www.sciencedirect.com/science/article/pii/S2352711017300614">paper2</a> ]</b></h2>
+<p>The goal in this project is to build a firewall for <a href="https://en.wikipedia.org/wiki/Session_Initiation_Protocol">SIP (Session Initiation Protocol)</a> networks. SIP is currently the most popular protocol that enables session control in computer communication networks and therefore, SIP servers have become targets of various attacks, such as <a href="https://en.wikipedia.org/wiki/Denial-of-service_attack">DDoS (Distributed Denial of Service)</a> attacks. DDoS attacks usually result in an abrupt change in the network traffic. </p>
+<p>To detect such changes, we built a <b>Bayesian multiple change point model</b>, whose input is a set of features extracted from target computer's network traffic. The observation at time <img class="eq" src="eqs/14848044661-130.png" alt="t" style="vertical-align: -1px" />, <img class="eq" src="eqs/5999452984665080558-130.png" alt="x_t" style="vertical-align: -4px" />, is assumed to be a random variable generated from a multinomial distribution with an unknown parameter <img class="eq" src="eqs/3779422072983366527-130.png" alt="pi_t" style="vertical-align: -4px" />. At change points, or when <img class="eq" src="eqs/6459262109147075300-130.png" alt="r_t=1" style="vertical-align: -4px" />, <img class="eq" src="eqs/3779422072983366527-130.png" alt="pi_t" style="vertical-align: -4px" /> is reset to a new value; otherwise, it keeps its value unchanged. Considering all together, the generative model of BCPM can be expressed as follows:</p>
+<table class="imgtable"><tr><td>
+<img src="images/bcpm.png" alt="Graphical Model for BCPM" width="500px" height="200px" />&nbsp;</td>
+<td align="left"></td></tr></table>
+<p>In the model, deciding whether a change has occurred at time <img class="eq" src="eqs/14848044661-130.png" alt="t" style="vertical-align: -1px" /> is tantamount to calculating the posterior probability of <img class="eq" src="eqs/756880090336066476-130.png" alt="r_t" style="vertical-align: -4px" />. This can be done by writing the forward recursions (<img class="eq" src="eqs/5971869613671387343-130.png" alt="alpha_{t|t}(r_t, pi_t) = p(r_t, pi_t, x_{1:t})" style="vertical-align: -8px" />) and integrating <img class="eq" src="eqs/3779422072983366527-130.png" alt="pi_t" style="vertical-align: -4px" /> out. If the task is not online, the posterior can be calculated conditioned on the full history of observations. When the reset model is the conjugate prior of the observation model, inference task becomes tractable. Gamma-Poisson model for one dimensional observations or Dirichlet-Multinomial model when observations are of higher orders can be useful. Of course, it is also possible to combine those two models in a single model, which we investigate in a paper (to-be-published). </p>
+
+<div class="eqwl"><img class="eqwl" src="eqs/3146459144825046774-130.png" alt="   	begin{array}{ll}   		pi_0  &amp;sim mathcal{D}ir(pi_0; a)  		r_t  &amp;sim mathcal{BE}(r_t; p)  		pi_t | r_t, pi_{t-1}  &amp;sim [r_{t}=0] delta(pi_{t} - pi_{t-1}) + [r_{t}=1] mathcal{D}ir(pi_t; a) 		x_t | pi_t  &amp;sim mathcal{M}(x_t; pi_t) 	end{array} " />
+<br /></div><p>or</p>
+
+<div class="eqwl"><img class="eqwl" src="eqs/7609278981240920997-130.png" alt="   	begin{array}{ll}   		pi_0  &amp;sim mathcal{G}(pi_0; a)  		r_t  &amp;sim mathcal{BE}(r_t; p)  		pi_t | r_t, pi_{t-1}  &amp;sim [r_{t}=0] delta(pi_{t} - pi_{t-1}) + [r_{t}=1] mathcal{G}(pi_t; a) 		x_t | pi_t  &amp;sim mathcal{P}(x_t; pi_t) 	end{array} " />
+<br /></div><p><br /></p>
+<p>I collected all my work on this model, including derivations and the implementation, in a jupyter notebook under <a href="https://github.com/cagatayyildiz/bayesian">my github repo</a> (see <b>Bayesian_Change_Point_Model.ipynb</b>). With python3.5 and necessary libraries installed, you can run the inference algorithm for your tasks. You can see the forward/backward recursion, calculation of smoothed densities and parameter learning via EM algorithm in the notebook.</p>
+<h2>Mixed Memory Hidden Markov Model for Optimal Newspaper Delivery (2015)</h2>
+<p>In this work, we are interested in the prediction of newspaper sales distributed to 2000+ outlets in Istanbul. This is actually a classical example of an optimization problem: A newspaper outlet would like to meet all customer demands, which actually can be achieved if the outlet receives more newspapers than it could sell from the distributor. However, the distributor has to collect the unsold newspapers next day, and this creates an additional cost.	</p>
+<p>The start of the project dates back to my first semester in grad school. This is why we approached the project from more of a pedagogical standpoint and tried to build and make the inference on my own model, which we refer as <b>Mixed Memory Hidden Markov Model(MMHMM)</b>.  The structure of MMHMM looks like the classical HMM (and maybe <a href="http://www.ee.columbia.edu/~sfchang/course/svia-F03/papers/factorial-HMM-97.pdf">Factorial HMM</a>) but we were essentially inspired by <a href="http://cseweb.ucsd.edu/~saul/papers/mixmem_ml99.pdf">Mixed Memory Markov Model (MMMM)</a>. </p>
+<table class="imgtable"><tr><td>
+<img src="images/mmhmm.png" alt="Graphical Model for MMHMM" width="600px" height="200px" />&nbsp;</td>
+<td align="left"></td></tr></table>
+<p>The graphical model for <img class="eq" src="eqs/2126761228016319976-130.png" alt="2^{nd}" style="vertical-align: -0px" /> order MMHMM is given above. In this model demand is latent, forms a Markov chain (here, the order is 2) and the relationship between demands on different days is governed by another set of latent states. When the order of Markov chain is <img class="eq" src="eqs/7779556930681419567-130.png" alt="K&gt;1" style="vertical-align: -1px" />, we do not specify a <img class="eq" src="eqs/9600028874-130.png" alt="K" style="vertical-align: -0px" /> dimensional transition matrix but we make the following parametrization:</p>
+
+<div class="eqwl"><img class="eqwl" src="eqs/1931676306278664372-130.png" alt=" 	begin{array}{ll} 		p(x_t|x_{t-1}, x_{t-2},..., x_{t-K}) = sum_{k=1}^K p(s_t=k) p(x_t|x_{t-k},s_t=k) 	end{array} " />
+<br /></div><p>Here, <img class="eq" src="eqs/4080923348323275509-130.png" alt="p(s_t)" style="vertical-align: -5px" /> is a <img class="eq" src="eqs/9600028874-130.png" alt="K" style="vertical-align: -0px" /> dimensional probability vector that weights the transitions and transitions with different orders are governed by different matrices. In general, transition matrix for order <img class="eq" src="eqs/13696041194-130.png" alt="k" style="vertical-align: -1px" /> is denoted as <img class="eq" src="eqs/4754481090569350883-130.png" alt="p(x_t|x_{t-k},s_t=k)" style="vertical-align: -5px" />. If <img class="eq" src="eqs/5999452984665080558-130.png" alt="x_t" style="vertical-align: -4px" /> can take <img class="eq" src="eqs/9984030031-130.png" alt="N" style="vertical-align: -0px" /> different values, this mixture model brings state space from an explosion -<img class="eq" src="eqs/7852461598340064159-130.png" alt="O(N^{K+1})" style="vertical-align: -5px" /> parameters- to a reasonable state with <img class="eq" src="eqs/6527578035244548800-130.png" alt="O(KN^2)" style="vertical-align: -5px" /> parameters. We finally have an observation probability matrix with <img class="eq" src="eqs/6274340959300756858-130.png" alt="O(NM)" style="vertical-align: -5px" /> parameters, if the number of observations is <img class="eq" src="eqs/9856029644-130.png" alt="M" style="vertical-align: -0px" />. </p>
+<p>Other than inference, we wanted to learn the model parameters that best fit our dataset. So, we derived EM updates for parameter learning. To sample from posterior distributions, I used Gibbs samplers, particle filters and Metropolis-Hastings algorithm as the state space is so large (and I took the <a href="https://dl.dropboxusercontent.com/u/9787379/cmpe58n/index.html">Monte Carlo Methods</a> course in the meantime). </p>
+<p>The output of this work was <a href="pdf/mmhmm-poster.pdf">this poster</a> and I have not been able to revisit and extend my work for a year or so. Yet, I am planning to implement exact EM updates with reduced time complexity and hopefully update this section:)</p>
+<h2>Graph Theoratical Approach to Epilepsy (2014)</h2>
+<p>Back on my last year as an undergrad, I was quite interested in graphs and social networks, in particular. Moreover, one part of mine has always been also into neuroscience. So, my graduation project was about investigating whether epilepsy is a genetically transmitted disease through graph theoratical approaches. </p>
+<p>I worked on a real-world dataset, collected from a village (in Turkey) with high epilepsy rate. I first examined general structure of the graph and recorded some interesting information:</p>
+<ul>
+<li><p>Epilepsy frequency of a particular relative is higher in the family background of the epileptics than that of healthy ones, which may imply epilepsy being genetically transmitted</p>
+</li>
+<li><p>Epilepsy frequency of a particular relative  is higher in the family background of male epileptics than that of female epileptics.</p>
+</li>
+</ul>
+<p>I then tried to modify Google's PageRank algorithm to extract a general property among the paths from one epileptic to another in the graph. The attempt was a fail.</p>
+<p><a href="http://www.cell.com/trends/ecology-evolution/abstract/S0169-5347(03)00225-8">This article</a> gave me an idea of the transmission of diseases. Using the genetic relatedness facts in the article, I attempted to build a probabilistic model, in which the probability of a newborn to be epileptic is contioned to his/her ancestors&rsquo; carrying disease or not. Yet, the model failed to explain the dataset, although I put a lot of effort on tuning the parameters.</p>
+<p>So, this was before I know some machine learning. Currently, I am planning to apply different classifiers that may possibly divide the dataset into two (epileptics and healthy people). Note that I am not an expert of epilepsy and would actually love to hear about what features I should work with for the classification problem.</p>
+</td>
+</tr>
+</table>
+</body>
+</html>

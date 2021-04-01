@@ -2,23 +2,24 @@
 layout: about
 title: about
 permalink: /
-description: <a href="#">Affiliations</a>. Address. Contacts. Moto. Etc.
+description: 
 
 profile:
   align: right
   image: prof_pic.jpg
   address: >
-    <p>555 your office number</p>
-    <p>123 your address street</p>
-    <p>Your City, State 12345</p>
+    <p>Room A357</p>
+    <p>Konemiehentie 2</p>
+    <p>02150 Espoo, Finland</p>
 
 news: true  # includes a list of news items
 selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
 ---
 
-Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com){:target="\_blank"}. You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
+I'm a doctoral candidate at the [Department of Computer Science](https://www.aalto.fi/en/department-of-computer-science){:target="\_blank"}, Aalto University, Finland. A member of [Computational Systems Biology](https://research.cs.aalto.fi/csb/){:target="\_blank"} research group, supervised by [Harri Lähdesmäki](https://users.ics.aalto.fi/harrila/){:target="\_blank"}. Before that, I worked with [Taylan Cemgil](https://www.cmpe.boun.edu.tr/~cemgil/){:target="\_blank"} in my Master's degree at Bogazici University, Istanbul. 
 
-Put your address / P.O. box / other info right below your picture. You can also disable any these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
-
-Link to your social media connections, too. This theme is set up to use [Font Awesome icons](http://fortawesome.github.io/Font-Awesome/){:target="\_blank"} and [Academicons](https://jpswalsh.github.io/academicons/){:target="\_blank"}, like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.
+I'm trying to understand how continuous-time models can be used in time-series learning, video prediction and reinforcement learning. Curious about the connections with optimal control. My research interests broadly include
+- Neural ordinary differential equations
+- Generative models
+- Reinforcement learning

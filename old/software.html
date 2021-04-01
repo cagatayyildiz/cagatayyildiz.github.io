@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta name="generator" content="jemdoc, see http://jemdoc.jaboc.net/" />
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<link rel="stylesheet" href="jemdoc.css" type="text/css" />
+<title>Software</title>
+</head>
+<body>
+<table summary="Table for page layout." id="tlayout">
+<tr valign="top">
+<td id="layout-menu">
+<div class="menu-item"><a href="index.html">Home</a></div>
+<div class="menu-category">Academic</div>
+<div class="menu-item"><a href="projects.html">Before&nbsp;PhD</a></div>
+<div class="menu-item"><a href="software.html" class="current">Software</a></div>
+<div class="menu-item"><a href="grad_courses.html">Grad&nbsp;Courses</a></div>
+<div class="menu-category">Personal</div>
+<div class="menu-item"><a href="good_readings.html">guzel&nbsp;okumalar</a></div>
+<div class="menu-item"><a href="reading_notes.html">okuma&nbsp;notlari</a></div>
+</td>
+<td id="layout-content">
+<div id="toptitle">
+<h1>Software</h1>
+</div>
+<h2>Nonparametric Ordinary Differential Equations [<a href="https://github.com/cagatayyildiz/npde">code</a>]</h2>
+<p>TensorFlow implementation of the library described below. Contains both GP-based ODEs and SDEs.</p>
+<h2>[old] Nonparametric Ordinary Differential Equations [<a href="https://github.com/cagatayyildiz/npode">code</a>]</h2>
+<p>This repository contains a MATLAB implementation of npODE - a nonparametric model for learning unknown ordinary differential equations. Our paper is presented in ICML 2018. Here is the <a href="https://arxiv.org/abs/1803.04303">arxiv link</a> to the paper.</p>
+<h2>PML: PILAB Matrix and Machine Learning Library [<a href="https://github.com/pilab-sigma/pml">code</a>]</h2>
+<p>In <a href="http://www2.cmpe.boun.edu.tr/pilab/doku.php">PILAB</a>, we mainly use Matlab and Python in our research projects. These languages are great to build prototype of whatever computation model in mind. When it comes to conducting experiments with huge data sets, however, it usually takes hours or days to run a single experiment. This is why my lab-mate <a href="http://bariskurt.com/">Barış Kurt</a> started a C++ project for developing linear algebra and machine learning applications that will speed up C++ coding. Barış has implemented most parts of the library, my contribution to pml is <tt>Tensor3D</tt> class.</p>
+<p>At some point in my Master's, I studied in hidden Markov models and then implemented stuff such as forward&amp;backward recursions, correction smoother, recursive smoother, batch&amp;online learning algorihms in C++ using pml. The module is currently under pml, named as <tt>pml_hmm.hpp</tt>. You can clone the repo and start enjoying a fast implementation of HMM.</p>
+<h2>Jupyter Notebook for Bayesian Change Point Model [<a href="https://github.com/pilab-sigma/bcpm">code&amp;derivations</a>]</h2>
+<p>The main focus of my thesis is Bayesian change point model. I have written two jupyter notebooks, where you can find the generative model, a few toy examples and python implementation of the model in the link given above. With python3.5 and necessary libraries installed, you can run the inference algorithm for your tasks. You may also have a look at C++ implementation of the model (also in the link next to title). Our C++ library is much more generic and very easy to extend.</p>
+<h2>boun-sim: A Real-Time SIP Traffic Generator [<a href="https://github.com/cagatayyildiz/boun-sim">code&amp;documentation</a>]</h2>
+<p>The goal in one of my projects is to build a firewall for <a href="https://en.wikipedia.org/wiki/Session_Initiation_Protocol">SIP (Session Initiation Protocol)</a> networks, SIP being the most popular protocol that enables session control in computer communication networks. It is usually not very easy to find data sets in domains that incorparate features that may violate user privacy. Therefore, to mimic the traffic on a SIP network, we built boun-sim: a probabilistic SIP network simulation system, which simply initiates calls between a number of users in real-time. </p>
+<h2>buyemek: An Android Application for Student Cafeteria Menu [<a href="https://github.com/cagatayyildiz/BUyemek">code</a>] [<a href="https://play.google.com/store/apps/details?id=com.cmpe.boun.buyemek">app</a>]</h2>
+<p>As a frequent visitor of the student cafeteria in <a href="www.boun.edu.tr">Bogazici University</a>, I check the cafeteria menu twice a day. At the same time, I wondered what mobile app codes looks like. So, I decided to learn Android programming by building an app that just lists the lunch and dinner menu of the day. The funny thing is it took 2-3 days to write the program and I have not been able to find a way to parse the .pdf file that stores the monthly menu and I still <i>manually</i> update the database my app connects to ¯\_(ツ)_/¯</p>
+<h2>şekerim(MySugar): An Android Application for Diabetics [<a href="http://www.hurriyetkampus.com/haberler/gundem/buyuk-odul-sekerim-in">in the news</a>]</h2>
+<p>After learning Android programming, my high school friend Emre, who was a student at Istanbul Faculty of Medicine back then, mentioned about a competition where we were going to design and implement an Andorid app that improves the quality of life in people with diabetes. After a literature survey on the needs of the diabetic, we built and app that calculates nutrient intake and makes suggestions accordingly, gives life tips, reminds medicine, plots blood sugar level, sends messages to the doctor, etc. I have not opened the code yet, as it needs a lot of modification for compatibility</p>
+</td>
+</tr>
+</table>
+</body>
+</html>
