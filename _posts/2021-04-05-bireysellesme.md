@@ -8,7 +8,7 @@ description: Kisinin bireysellesme surecinde aile ve toplumun etkileri
 Bu sayfada yazdiklarim, Prof. Guler Okman Fisek'in [Iliski Icinde Ben](https://bilgiyay.com/kitap/iliski-icinde-ben/){:target="\_blank"} adli kitabinin birinci kismi olan **Aile Baglaminda Benlik** etrafinda dolasiyor. Yer yer alintilar yapip cogunlukla kendi yorumlarimi vermeye calisacagim. 
 
 <p align="center">
-  <img class="img-fluid rounded z-depth-1" src="{{ site.baseurl }}/assets/img/ilisski-icinde-ben.png" style="width:300px;" />
+  <img class="img-fluid rounded z-depth-1" src="{{ site.baseurl }}/assets/img/iliski-icinde-ben.png" style="width:300px;" />
 </p>
 
 
