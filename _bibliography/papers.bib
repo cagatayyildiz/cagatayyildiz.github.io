@@ -1,6 +1,17 @@
 ---
 ---
 
+@inproceedings{hegde2021bayesian,
+    abbr={arxiv},
+    author = {Hedge, Pashupati, Yildiz, Cagatay and Lahdesmaki, Harri and Kaski, Samuel and Heinonen, Markus},
+    booktitle = {submitted},
+    title = {Bayesian inference of ODEs with Gaussian processes},
+    year = {2021},
+    pdf={https://arxiv.org/pdf/2106.10905.pdf},
+    abstract={Recent machine learning advances have proposed black-box estimation of unknown continuous-time system dynamics directly from data. However, earlier works are based on approximative ODE solutions or point estimates. We propose a novel Bayesian nonparametric model that uses Gaussian processes to infer posteriors of unknown ODE systems directly from data. We derive sparse variational inference with decoupled functional sampling to represent vector field posteriors. We also introduce a probabilistic shooting augmentation to enable efficient inference from arbitrarily long trajectories. The method demonstrates the benefit of computing vector field posteriors, with predictive uncertainty scores outperforming alternative methods on multiple ODE learning tasks.},
+    selected={true} 
+}
+
 @inproceedings{yildiz2021continuous,
     abbr={ICML},
     author = {Yildiz, Cagatay and Heinonen, Markus and Lahdesmaki, Harri},
@@ -9,7 +20,7 @@
     year = {2021},
     pdf={https://arxiv.org/pdf/2102.04764.pdf},
     code={https://github.com/cagatayyildiz/oderl},
-    abstract={Model-based reinforcement learning (MBRL) approaches rely on discrete-time state transition models whereas physical systems and the vast majority of control tasks operate in continuous-time. To avoid time-discretization approximation of the underlying process, we propose a continuous-time MBRL framework based on a novel actor-critic method. Our approach also infers the unknown state evolution differentials with Bayesian neural ordinary differential equations (ODE) to account for epistemic uncertainty. We implement and test our method on a new ODE-RL suite that explicitly solves continuous-time control systems. Our experiments illustrate that the model is robust against irregular and noisy data, is sampleefficient, and can solve control problems which pose challenges to discrete-time MBRL methods.},
+    abstract={Model-based reinforcement learning (MBRL) approaches rely on discrete-time state transition models whereas physical systems and the vast majority of control tasks operate in continuous-time. To avoid time-discretization approximation of the underlying process, we propose a continuous-time MBRL framework based on a novel actor-critic method. Our approach also infers the unknown state evolution differentials with Bayesian neural ordinary differential equations (ODE) to account for epistemic uncertainty. We implement and test our method on a new ODE-RL suite that explicitly solves continuous-time control systems. Our experiments illustrate that the model is robust against irregular and noisy data, is sample-efficient, and can solve control problems which pose challenges to discrete-time MBRL methods. }, 
     selected={true} 
 }
 
