@@ -9,4 +9,8 @@ group :jekyll_plugins do
     gem 'jekyll-twitter-plugin'
     gem 'jemoji'
     gem 'unicode_utils'
+	gem 'faraday-retry'
 end
+
+#gem "webrick", "~> 1.7"
+#gem "kramdown-parser-gfm"
