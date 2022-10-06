@@ -3,13 +3,13 @@
 
 
 @inproceedings{yildiz2022learning,
-    abbr={arxiv},
+    abbr={NeurIPS},
     author = {Yildiz, Cagatay and Kandemir, Melih and Rakitsch, Barbara},
-    booktitle = {submitted},
+    booktitle = {Advances in Neural Information Processing Systems},
     title = {Learning Interacting Dynamical Systems with Latent Gaussian Process ODEs},
     year = {2022},
     pdf={https://arxiv.org/pdf/2205.11894.pdf},
-    abstract={We study for the first time uncertainty-aware modeling of continuous-time dynamics of interacting objects. We introduce a new model that decomposes independent dynamics of single objects accurately from their interactions. By employing latent Gaussian process ordinary differential equations, our model infers both independent dynamics and their interactions with reliable uncertainty estimates. In our formulation, each object is represented as a graph node and interactions are modeled by accumulating the messages coming from neighboring objects. We show that efficient inference of such a complex network of variables is possible with modern variational sparse Gaussian process inference techniques. We empirically demonstrate that our model improves the reliability of long-term predictions over neural network based alternatives and it successfully handles missing dynamic or static information. Furthermore, we observe that only our model can successfully encapsulate independent dynamics and interaction information in distinct functions and show the benefit from this disentanglement in extrapolation scenarios.},
+    abstract={We study uncertainty-aware modeling of continuous-time dynamics of interacting objects. We introduce a new model that decomposes independent dynamics of single objects accurately from their interactions. By employing latent Gaussian process ordinary differential equations, our model infers both independent dynamics and their interactions with reliable uncertainty estimates. In our formulation, each object is represented as a graph node and interactions are modeled by accumulating the messages coming from neighboring objects. We show that efficient inference of such a complex network of variables is possible with modern variational sparse Gaussian process inference techniques. We empirically demonstrate that our model improves the reliability of long-term predictions over neural network based alternatives and it successfully handles missing dynamic or static information. Furthermore, we observe that only our model can successfully encapsulate independent dynamics and interaction information in distinct functions and show the benefit from this disentanglement in extrapolation scenarios.},
     selected={true} 
 }
 
@@ -17,7 +17,7 @@
     abbr={UAI},
     author = {Hedge, Pashupati and Yildiz, Cagatay and Lahdesmaki, Harri and Kaski, Samuel and Heinonen, Markus},
     booktitle = {Uncertainty in Artificial Intelligence},
-    title = {Bayesian inference of ODEs with Gaussian processes},
+    title = {Variational multiple shooting for Bayesian ODEs with Gaussian processes},
     year = {2022},
     pdf={https://arxiv.org/pdf/2106.10905.pdf},
     abstract={Recent machine learning advances have proposed black-box estimation of unknown continuous-time system dynamics directly from data. However, earlier works are based on approximative ODE solutions or point estimates. We propose a novel Bayesian nonparametric model that uses Gaussian processes to infer posteriors of unknown ODE systems directly from data. We derive sparse variational inference with decoupled functional sampling to represent vector field posteriors. We also introduce a probabilistic shooting augmentation to enable efficient inference from arbitrarily long trajectories. The method demonstrates the benefit of computing vector field posteriors, with predictive uncertainty scores outperforming alternative methods on multiple ODE learning tasks.},
