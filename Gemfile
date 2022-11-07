@@ -10,7 +10,11 @@ group :jekyll_plugins do
     gem 'jemoji'
     gem 'unicode_utils'
 	gem 'faraday-retry'
+    gem 'jekyll-jupyter-notebook'
 end
 
 #gem "webrick", "~> 1.7"
 #gem "kramdown-parser-gfm"
+
+gem "webrick", "~> 1.7"
+gem "jekyll-jupyter-notebook"
