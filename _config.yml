@@ -66,8 +66,8 @@ panelbear_analytics: XXXXXXXXX # panelbear analytics site ID
 # Blog
 # -----------------------------------------------------------------------------
 
-blog_name: write-ups  # your blog must have a name for it to show up in the nav bar
-blog_description: jupyter notebooks, fav books, book notes
+blog_name: notlar # your blog must have a name for it to show up in the nav bar
+blog_description: fav books, notes from books, in Turkish
 permalink: /blog/:year/:title/
 
 # Pagination
@@ -143,8 +143,8 @@ plugins:
 
 scholar:
 
-  last_name: Yildiz
-  first_name: [Cagatay]
+  last_name: Yıldız
+  first_name: [Çağatay]
 
   style: apa
   locale: en
