@@ -6,7 +6,7 @@ description: The presentation that I made in ProbAI 2022, Helsinki.
 tag: NODEs
 ---
 
-{% jupyter_notebook "node" %}
+{% jupyter_notebook "NODE" %}
 
 
 
