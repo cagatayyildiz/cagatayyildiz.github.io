@@ -66,13 +66,14 @@ panelbear_analytics: XXXXXXXXX # panelbear analytics site ID
 # Blog
 # -----------------------------------------------------------------------------
 
-blog_name: okumalar  # your blog must have a name for it to show up in the nav bar
-blog_description: okuduklarim, önerdiklerim ve notlarim
+blog_name: write-ups  # your blog must have a name for it to show up in the nav bar
+blog_description: jupyter notebooks, fav books, book notes
 permalink: /blog/:year/:title/
 
 # Pagination
 pagination:
   enabled: true
+  per_page: 10
 
 # Comments
 disqus_shortname: blog # put your disqus shortname
@@ -90,6 +91,9 @@ collections:
   projects:
     output: true
     permalink: /projects/:path/
+  notes:
+    output: true
+    permalink: /notes/:path/
 
 news_limit: 10
 
