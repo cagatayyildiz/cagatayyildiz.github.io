@@ -11,7 +11,6 @@ group :jekyll_plugins do
     gem 'unicode_utils'
 	gem 'faraday-retry'
     gem 'jekyll-jupyter-notebook'
-    gem 'webrick'
 end
 
 #gem "webrick", "~> 1.7"
