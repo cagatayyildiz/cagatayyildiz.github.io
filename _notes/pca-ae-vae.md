@@ -6,7 +6,7 @@ description: This lecture notes show the connection between linear and non-linea
 tag: PCA
 ---
 
-{::nomarkdown} {% jupyter_notebook "pca-ae-vae.ipynb" %} {:/}
+{% jupyter_notebook "pca-ae-vae" %}
 
 
 

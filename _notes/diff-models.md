@@ -6,7 +6,7 @@ description: 1D illustration of diffusion models, denoising and generation
 tag: SDEs
 ---
 
-{% jupyter_notebook "diff-models.ipynb" %}
+{% jupyter_notebook "diff-models" %}
 
 
 
