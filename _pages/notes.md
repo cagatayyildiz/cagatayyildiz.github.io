@@ -25,8 +25,8 @@ nav: true
   </ul>
 {% endfor %} -->
 
-{% for note in site.notes %}
+{% for note in site.notes reversed %}
   <h2> <a href="{{ note.url }}">{{ note.title }}</a></h2>
-  <p>{{ note.description }}</p>
+  <p>[{{ note.date | date: "%Y-%m-%d" }}] {{ note.description }}</p>
 {% endfor %}
 
