@@ -1,6 +1,6 @@
 ---
 layout: post
-date: 2022-10-06 11:59:00-0400
+date: 2023-01-06 11:59:00-0400
 inline: true
 ---
-👨‍💻 [Paper](https://arxiv.org/pdf/2210.03466.pdf){:target="\_blank"} submitted to ICLR 2023!
+👨‍💻 [Latent neural ODEs with sparse multiple shooting paper](https://openreview.net/pdf?id=moIlFZfj_1b){:target="\_blank"} accepted to ICLR 2023!

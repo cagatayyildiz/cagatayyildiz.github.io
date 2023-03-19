@@ -19,10 +19,11 @@ social: true  # includes social icons at the bottom of the page
 
 I'm a postdoctoral researcher at the [Bethge Lab](http://bethgelab.org/){:target="\_blank"}, University of Tuebingen. I received my doctoral degree from the [Computational Systems Biology](https://research.cs.aalto.fi/csb/){:target="\_blank"} research group, supervised by [Harri Lähdesmäki](https://users.ics.aalto.fi/harrila/){:target="\_blank"} at Aalto University, Finland. Before that, I worked with [Taylan Cemgil](https://www.cmpe.boun.edu.tr/~cemgil/){:target="\_blank"} in my Master's degree at Bogazici University, Istanbul. 
 
-My postdoctoral studies involve different aspects of continual learning. In my PhD, I tried to understand how continuous-time models can be used in time-series learning, video prediction and reinforcement learning. Curious about the connections with optimal control. My research interests broadly include
-- Continual learning
-- Neural ordinary differential equations
-- Generative models
-- Reinforcement learning
+My postdoctoral studies involve different aspects of representation learning. I work on
+- group theory for disentangled representations.
+- lifelong disentanglement with [Sebastian](https://scholar.google.com/citations?user=8vAIQXoAAAAJ&hl=en).
+- dynamical systems with [Ilze](https://scholar.google.com/citations?hl=en&user=AJIXYb0AAAAJ), [Stratis](https://www.egavves.com/) and [Sara](https://saramagliacane.github.io/).
+- diffusion models for temporal data with [Elif](https://www.linkedin.com/in/elifakata/?originalSubdomain=de) and [Joon](https://www.eml-unitue.de/people/seong-joon-oh).
+- prototype learning with [Gözde](https://gozde-unal.github.io/) and [Melih](https://melihkandemir.github.io/).
 
 My name is super easy to pronounce: [chaa-tai](https://forvo.com/word/%C3%A7a%C4%9Fatay/){:target="\_blank"}.
