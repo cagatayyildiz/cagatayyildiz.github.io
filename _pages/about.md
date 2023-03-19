@@ -27,3 +27,5 @@ My postdoctoral studies involve different aspects of representation learning. I 
 - prototype learning with [Gözde](https://gozde-unal.github.io/) and [Melih](https://melihkandemir.github.io/).
 
 My name is super easy to pronounce: [chaa-tai](https://forvo.com/word/%C3%A7a%C4%9Fatay/){:target="\_blank"}.
+
+Check out [Markus' guidelines for PhD students](https://users.aalto.fi/~heinom10/guidelines.html){:target="\_blank"}.
