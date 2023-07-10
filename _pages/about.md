@@ -17,7 +17,7 @@ selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
 ---
 
-I'm a postdoctoral researcher at the [Bethge Lab](http://bethgelab.org/){:target="\_blank"}, University of Tuebingen. I received my doctoral degree from the [Computational Systems Biology](https://research.cs.aalto.fi/csb/){:target="\_blank"} research group, supervised by [Harri Lähdesmäki](https://users.ics.aalto.fi/harrila/){:target="\_blank"} at Aalto University, Finland. Before that, I worked with [Taylan Cemgil](https://www.cmpe.boun.edu.tr/~cemgil/){:target="\_blank"} in my Master's degree at Bogazici University, Istanbul. 
+I'm a postdoctoral researcher at the [Bethge Lab](http://bethgelab.org/){:target="\_blank"}, University of Tuebingen. During my doctoral studies, I was supervised by [Harri Lähdesmäki](https://users.ics.aalto.fi/harrila/){:target="\_blank"} at Aalto University, Finland. Before that, I worked with [Taylan Cemgil](https://www.cmpe.boun.edu.tr/~cemgil/){:target="\_blank"} in my Master's degree at Bogazici University, Istanbul. 
 
 My postdoctoral studies are about a mixed bag of machine learning models. I work on
 - Lie auto-encoders with [Tolga](https://www.imperial.ac.uk/people/t.birdal) and [Matthias](https://bethgelab.org/).
