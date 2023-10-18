@@ -6,7 +6,7 @@ description:
 
 profile:
   align: right
-  image: prof_pic.jpg
+  image: prof_pic.png
   address: >
     <p>AI Research Building</p>
     <p>Maria-von-Linden-Str. 6</p>
