@@ -1,0 +1,34 @@
+<div class="grid-sizer"></div>
+<div class="grid-item">
+  <a href="{% if note.redirect %}{{ note.redirect }}{% else %}{{ note.url | relative_url }}{% endif %}">
+    <div class="card hoverable">
+      {% if note.img %}
+        {%
+          include figure.liquid
+          path=note.img
+          sizes = "250px"
+          alt="note thumbnail"
+        %}
+      {% endif %}
+      <div class="card-body">
+        <h2 class="card-title text-lowercase">{{ note.title }}</h2>
+        <p class="card-text">{{ note.description }}</p>
+        <div class="row ml-1 mr-1 p-0">
+          {% if note.github %}
+            <div class="github-icon">
+              <div class="icon" data-toggle="tooltip" title="Code Repository">
+                <a href="{{ note.github }}"><i class="fa-brands fa-github gh-icon"></i></a>
+              </div>
+              {% if note.github_stars %}
+                <span class="stars" data-toggle="tooltip" title="GitHub Stars">
+                  <i class="fa-solid fa-star"></i>
+                  <span id="{{ note.github_stars }}-stars"></span>
+                </span>
+              {% endif %}
+            </div>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </a>
+</div>
