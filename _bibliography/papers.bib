@@ -1,230 +1,85 @@
 ---
 ---
 
-@inproceedings{auzina2023invariant,
-    abbr={NeurIPS},
-    author={Auzina, Ilze Amanda and Yıldız, Çağatay and Magliacane, Sara and Bethge, Matthias and Gavves, Efstratios},
-    booktitle = {Advances in Neural Information Processing Systems},
-    title={Invariant Neural Ordinary Differential Equations},
-    year = {2023},
-    pdf={https://arxiv.org/pdf/2302.13262.pdf},
-    abstract={Latent neural ordinary differential equations have been proven useful for learning non-linear dynamics of arbitrary sequences. In contrast with their mechanistic counterparts, the predictive accuracy of neural ODEs decreases over longer prediction horizons (Rubanova et al., 2019). To mitigate this issue, we propose disentangling dynamic states from time-invariant variables in a completely data-driven way, enabling robust neural ODE models that can generalize across different settings. We show that such variables can control the latent differential function and/or parameterize the mapping from latent variables to observations. By explicitly modeling the time-invariant variables, our framework enables the use of recent advances in representation learning. We demonstrate this by introducing a straightforward self-supervised objective that enhances the learning of these variables. The experiments on low-dimensional oscillating systems and video sequences reveal that our disentangled model achieves improved longterm predictions, when the training data involve sequence-specific factors of variation such as different rotational speeds, calligraphic styles, and friction constants.},
-    selected={true}
+@string{aps = {American Physical Society,}}
+
+@book{einstein1956investigations,
+  bibtex_show={true},
+  title={Investigations on the Theory of the Brownian Movement},
+  author={Einstein, Albert},
+  year={1956},
+  publisher={Courier Corporation},
+  preview={brownian-motion.gif}
 }
 
-@inproceedings{auzina2022latent,
-    abbr={NeurIPS workshop},
-    booktitle = {A causal view on dynamical systems workshop},
-    author={Auzina, Ilze Amanda and Yıldız, Çağatay and Gavves, Efstratios},
-    title={Latent GP-ODEs with Informative Priors},
-    year = {2022},
-    pdf={https://openreview.net/pdf?id=vj9vS27Gq6P},
-    abstract={For many complex systems the parametric form of the differential equation might be unknown or infeasible to determine. Earlier works have explored to model the unknown ODE system with a Gaussian Process model, however, the application has been limited to a low dimensional data setting. We propose a novel framework by combining a generative and a Bayesian nonparametric model. Our model learns a physically meaningful latent representation (position, momentum) and solves in the latent space an ODE system. The use of GP allows us to account for uncertainty as well as to extend our work with informative priors. We demonstrate our framework on an image rotation dataset. The method demonstrates its ability to learn dynamics from high dimensional data and we obtain state-of-the-art performance compared to earlier GP-based ODEs models on dynamic forecasting.}
+@article{einstein1950meaning,
+  abbr={AJP},
+  bibtex_show={true},
+  title={The meaning of relativity},
+  author={Einstein, Albert and Taub, AH},
+  journal={American Journal of Physics},
+  volume={18},
+  number={6},
+  pages={403--404},
+  year={1950},
+  publisher={American Association of Physics Teachers}
 }
 
-@inproceedings{iakovlev2022latent,
-    abbr={ICLR},
-    author={Iakovlev, Valerii and Yıldız, Çağatay and Heinonen, Markus and L{\"a}hdesm{\"a}ki, Harri},
-    booktitle = {International Conference on Learning Representations},
-    title={Latent Neural ODEs with Sparse Bayesian Multiple Shooting},
-    year = {2023},
-    pdf={https://openreview.net/pdf?id=moIlFZfj_1b},
-    abstract={Training dynamic models, such as neural ODEs, on long trajectories is a hard problem that requires using various tricks, such as trajectory splitting, to make model training work in practice. These methods are often heuristics with poor theoretical justifications, and require iterative manual tuning. We propose a principled multiple shooting technique for neural ODEs that splits the trajectories into manageable short segments, which are optimised in parallel, while ensuring probabilistic control on continuity over consecutive segments. We derive variational inference for our shooting-based latent neural ODE models and propose amortized encodings of irregularly sampled trajectories with a transformer-based recognition network with temporal attention and relative positional encoding. We demonstrate efficient and stable training, and state-of-the-art performance on multiple large-scale benchmark datasets.},
-    selected={true}
+@article{PhysRev.47.777,
+  abbr={PhysRev},
+  title={Can Quantum-Mechanical Description of Physical Reality Be Considered Complete?},
+  author={Einstein, A. and Podolsky, B. and Rosen, N.},
+  abstract={In a complete theory there is an element corresponding to each element of reality. A sufficient condition for the reality of a physical quantity is the possibility of predicting it with certainty, without disturbing the system. In quantum mechanics in the case of two physical quantities described by non-commuting operators, the knowledge of one precludes the knowledge of the other. Then either (1) the description of reality given by the wave function in quantum mechanics is not complete or (2) these two quantities cannot have simultaneous reality. Consideration of the problem of making predictions concerning a system on the basis of measurements made on another system that had previously interacted with it leads to the result that if (1) is false then (2) is also false. One is thus led to conclude that the description of reality as given by a wave function is not complete.},
+  journal={Phys. Rev.},
+  volume={47},
+  issue={10},
+  pages={777--780},
+  numpages={0},
+  year={1935},
+  month={May},
+  publisher=aps,
+  doi={10.1103/PhysRev.47.777},
+  url={http://link.aps.org/doi/10.1103/PhysRev.47.777},
+  html={https://journals.aps.org/pr/abstract/10.1103/PhysRev.47.777},
+  pdf={example_pdf.pdf},
+  altmetric={248277},
+  dimensions={true},
+  google_scholar_id={qyhmnyLat1gC},
+  selected={true}
 }
 
-@inproceedings{yildiz2022learning,
-    abbr={NeurIPS},
-    author = {Yıldız, Çağatay and Kandemir, Melih and Rakitsch, Barbara},
-    booktitle = {Advances in Neural Information Processing Systems},
-    title = {Learning Interacting Dynamical Systems with Latent Gaussian Process ODEs},
-    year = {2022},
-    pdf={https://arxiv.org/pdf/2205.11894.pdf},
-    abstract={We study uncertainty-aware modeling of continuous-time dynamics of interacting objects. We introduce a new model that decomposes independent dynamics of single objects accurately from their interactions. By employing latent Gaussian process ordinary differential equations, our model infers both independent dynamics and their interactions with reliable uncertainty estimates. In our formulation, each object is represented as a graph node and interactions are modeled by accumulating the messages coming from neighboring objects. We show that efficient inference of such a complex network of variables is possible with modern variational sparse Gaussian process inference techniques. We empirically demonstrate that our model improves the reliability of long-term predictions over neural network based alternatives and it successfully handles missing dynamic or static information. Furthermore, we observe that only our model can successfully encapsulate independent dynamics and interaction information in distinct functions and show the benefit from this disentanglement in extrapolation scenarios.},
-    selected={true},
-    code={https://github.com/boschresearch/iGPODE}
+@article{einstein1905molekularkinetischen,
+  title={{\"U}ber die von der molekularkinetischen Theorie der W{\"a}rme geforderte Bewegung von in ruhenden Fl{\"u}ssigkeiten suspendierten Teilchen},
+  author={Einstein, A.},
+  journal={Annalen der physik},
+  volume={322},
+  number={8},
+  pages={549--560},
+  year={1905},
+  publisher={Wiley Online Library}
 }
 
-@inproceedings{hegde2021bayesian,
-    abbr={UAI},
-    author = {Hedge, Pashupati and Yıldız, Çağatay and Lahdesmaki, Harri and Kaski, Samuel and Heinonen, Markus},
-    booktitle = {Uncertainty in Artificial Intelligence},
-    title = {Variational multiple shooting for Bayesian ODEs with Gaussian processes},
-    year = {2022},
-    pdf={https://arxiv.org/pdf/2106.10905.pdf},
-    abstract={Recent machine learning advances have proposed black-box estimation of unknown continuous-time system dynamics directly from data. However, earlier works are based on approximative ODE solutions or point estimates. We propose a novel Bayesian nonparametric model that uses Gaussian processes to infer posteriors of unknown ODE systems directly from data. We derive sparse variational inference with decoupled functional sampling to represent vector field posteriors. We also introduce a probabilistic shooting augmentation to enable efficient inference from arbitrarily long trajectories. The method demonstrates the benefit of computing vector field posteriors, with predictive uncertainty scores outperforming alternative methods on multiple ODE learning tasks.},
-    selected={true},
-    code={https://github.com/hegdepashupati/gaussian-process-odes}
+@article{einstein1905movement,
+  abbr={Ann. Phys.},
+  title={Un the movement of small particles suspended in statiunary liquids required by the molecular-kinetic theory 0f heat},
+  author={Einstein, A.},
+  journal={Ann. Phys.},
+  volume={17},
+  pages={549--560},
+  year={1905}
 }
 
-@phdthesis{Yıldız2022,
-    abbr={thesis},
-title={{Differential Equations for Machine Learning}},
-author={Yıldız, Çağatay},
-year={2022},
-language={English},
-pages={106 + app. 82},
-publisher={Aalto University},
-school={School of Science},
-type={Doctoral thesis},
-keywords={machine learning, differential equations, neural networks, Gaussian processes},
-isbn={978-952-64-0666-4 (electronic), 978-952-64-0665-7 (printed)},
-series={Aalto University publication series DOCTORAL THESES; 7/2022},
-issn={1799-4942 (electronic), 1799-4934 (printed), 1799-4934 (ISSN-L)},
-url={http://urn.fi/URN:ISBN:978-952-64-0666-4},
-    pdf={https://aaltodoc.aalto.fi/bitstream/handle/123456789/112291/isbn9789526406664.pdf?sequence=1&isAllowed=y},
-    html={http://urn.fi/URN:ISBN:978-952-64-0666-4},
-selected={true} 
+@article{einstein1905electrodynamics,
+  title={On the electrodynamics of moving bodies},
+  author={Einstein, A.},
+  year={1905}
 }
 
-@inproceedings{yildiz2021continuous,
-    abbr={ICML},
-    author = {Yıldız, Çağatay and Heinonen, Markus and Lahdesmaki, Harri},
-    booktitle = {International Conference on Machine Learning},
-    title = {Continuous-time Model-based Reinforcement Learning},
-    year = {2021},
-    pdf={https://arxiv.org/pdf/2102.04764.pdf},
-    code={https://github.com/cagatayyildiz/oderl},
-    abstract={Model-based reinforcement learning (MBRL) approaches rely on discrete-time state transition models whereas physical systems and the vast majority of control tasks operate in continuous-time. To avoid time-discretization approximation of the underlying process, we propose a continuous-time MBRL framework based on a novel actor-critic method. Our approach also infers the unknown state evolution differentials with Bayesian neural ordinary differential equations (ODE) to account for epistemic uncertainty. We implement and test our method on a new ODE-RL suite that explicitly solves continuous-time control systems. Our experiments illustrate that the model is robust against irregular and noisy data, is sample-efficient, and can solve control problems which pose challenges to discrete-time MBRL methods. }, 
-    selected={true} 
-}
-
-@inproceedings{yildiz2019deep,
-    abbr={NeurIPS},
-    author = {Yıldız, Çağatay and Heinonen, Markus and Lahdesmaki, Harri},
-    booktitle = {Advances in Neural Information Processing Systems},
-    title = {ODE2VAE: Deep generative second order ODEs with Bayesian neural networks},
-    year = {2019},
-    pdf={https://papers.nips.cc/paper/2019/file/99a401435dcb65c4008d3ad22c8cdad0-Paper.pdf},
-    html={https://papers.nips.cc/paper/2019/hash/99a401435dcb65c4008d3ad22c8cdad0-Abstract.html},
-    abstract={We present Ordinary Differential Equation Variational Auto-Encoder (ODE2VAE), a latent second order ODE model for high-dimensional sequential data. Leveraging the advances in deep generative models, ODE2VAE can simultaneously learn the embedding of high dimensional trajectories and infer arbitrarily complex continuous-time latent dynamics. Our model explicitly decomposes the latent space into momentum and position components and solves a second order ODE system, which is in contrast to recurrent neural network (RNN) based time series models and recently proposed black-box ODE techniques. In order to account for uncertainty, we propose probabilistic latent ODE dynamics parameterized by deep Bayesian neural networks. We demonstrate our approach on motion capture, image rotation, and bouncing balls datasets. We achieve state-of-the-art performance in long term motion prediction and imputation tasks.},
-    code={https://github.com/cagatayyildiz/ODE2VAE},
-    supp={https://papers.nips.cc/paper/2019/file/99a401435dcb65c4008d3ad22c8cdad0-Supplemental.zip},
-    poster={https://github.com/cagatayyildiz/ODE2VAE/blob/master/ode2vae_poster.pdf},
-    selected={true}
-}
-
-@inproceedings{heinonen18learning,
-    abbr={ICML},
-    author = {Heinonen, Markus and Yıldız, Çağatay and Mannerström, Henrik and Intosalmi, Jukka and Lähdesmäki, Harri},
-    booktitle = {International Conference on Machine Learning},
-    title = {Learning unknown ODE models with Gaussian processes},
-    year = {2018},
-    abstract={In conventional ODE modelling coefficients of an equation driving the system state forward in time are estimated. However, for many complex systems it is practically impossible to determine the equations or interactions governing the underlying dynamics. In these settings, parametric ODE model cannot be formulated. Here, we overcome this issue by introducing a novel paradigm of nonparametric ODE modelling that can learn the underlying dynamics of arbitrary continuous-time systems without prior knowledge. We propose to learn non-linear, unknown differential functions from state observations using Gaussian process vector fields within the exact ODE formalism. We demonstrate the model’s capabilities to infer dynamics from sparse data and to simulate the system forward into future.},
-    pdf={http://proceedings.mlr.press/v80/heinonen18a/heinonen18a.pdf},
-    html={https://papers.nips.cc/paper/2019/hash/99a401435dcb65c4008d3ad22c8cdad0-Abstract.html},
-    code={https://github.com/cagatayyildiz/npde/},
-    supp={http://proceedings.mlr.press/v80/heinonen18a/heinonen18a-supp.pdf},
-    poster={https://github.com/cagatayyildiz/npde/blob/master/npode_poster.pdf},
-    selected={true}
-}
-
-@inproceedings{simsekli18learning,
-    abbr={ICML},
-    author = {Simsekli, Umut and Yıldız, Çağatay and Nguyen, Than Huy and Cemgil, Taylan and Richard, Gael},
-    booktitle = {International Conference on Machine Learning},
-    title = {Asynchronous Stochastic Quasi-Newton MCMC for Non-Convex Optimization},
-    year = {2018},
-    abstract={Recent studies have illustrated that stochastic gradient Markov Chain Monte Carlo techniques have a strong potential in non-convex optimization, where local and global convergence guarantees can be shown under certain conditions. By building up on this recent theory, in this study, we develop an asynchronous-parallel stochastic L-BFGS algorithm for non-convex optimization. The proposed algorithm is suitable for both distributed and shared-memory settings. We provide formal theoretical analysis and show that the proposed method achieves an ergodic convergence rate of O(1/\sqrtN) (N being the total number of iterations) and it can achieve a linear speedup under certain conditions. We perform several experiments on both synthetic and real datasets. The results support our theory and show that the proposed algorithm provides a significant speedup over the recently proposed synchronous distributed L-BFGS algorithm.},
-    pdf={http://proceedings.mlr.press/v80/simsekli18a/simsekli18a.pdf},
-    html={http://proceedings.mlr.press/v80/simsekli18a},
-    supp={http://proceedings.mlr.press/v80/simsekli18a/simsekli18a-supp.pdf},
-    poster={aslbfgs_poster.pdf},
-    selected={true}
-}
-
-@inproceedings{yildiz18learning,
-    abbr={MLSP},
-    author = {Yıldız, Çağatay and Heinonen, Markus and Intosalmi, Jukka and Mannerström, Henrik and Lähdesmäki, Harri},
-    booktitle = {IEEE 28th International Workshop on Machine Learning for Signal Processing},
-    title = {Learning Stochastic Differential Equations With Gaussian Processes Without Gradient Matching},
-    year = {2018},
-    abstract={We introduce a novel paradigm for learning non-parametric drift and diffusion functions for stochastic differential equation (SDE). The proposed model learns to simulate path distributions that match observations with non-uniform time increments and arbitrary sparseness, which is in contrast with gradient matching that does not optimize simulated responses. We formulate sensitivity equations for learning and demonstrate that our general stochastic distribution optimisation leads to robust and efficient learning of SDE systems.},
-    pdf={https://arxiv.org/pdf/1807.05748.pdf},
-    html={https://ieeexplore.ieee.org/document/8516991/references#references},
-    code={https://github.com/cagatayyildiz/npde/}
-}
-
-@inproceedings{yildiz18nonparametric,
-    abbr={Workshop},
-    author = {Yıldız, Çağatay and Heinonen, Markus and Lähdesmäki, Harri},
-    booktitle = {NeurIPS Spatiotemporal Workshop},
-    title = {A Nonparametric Spatio-temporal SDE Model},
-    year = {2018},
-    abstract={We propose a nonparametric spatio-temporal stochastic differential equation (SDE) model that can learn the underlying dynamics of arbitrary continuous-time systems without prior knowledge. We augment the input space of the drift function of an SDE with a temporal component to account for spatio-temporal patterns. The experiments on a real world data set demonstrate that the spatio-temporal model is better able to fit the data than the spatial model and also reduce the forecasting error.},
-    pdf={https://openreview.net/pdf?id=HJzoRCKwjQ},
-    poster={https://github.com/cagatayyildiz/npde/blob/master/npde_spatiotemporal.pdf}
-}
-
-@inproceedings{kurt18bayesian,
-    abbr={DSP},
-    author = {Kurt, Baris and Yıldız, Çağatay and Ceritli, Taha and Sankur, Bulent and Cemgil, Taylan},
-    booktitle = {Digital Signal Processing},
-    title = {A Bayesian change point model for detecting SIP-based DDoS attacks},
-    year = {2018},
-    abstract={Session Initiation Protocol (SIP), as one the most common signaling mechanism for Voice Over Internet Protocol (VoIP) applications, is a popular target for the flooding-based Distributed Denial of Service (DDoS) attacks. In this paper, we propose a DDoS attack detection framework based on the Bayesian multiple change model, which can detect different types of flooding attacks. Additionally, we propose a probabilistic SIP network simulation system that provides a test environment for network security tools.},
-    html={https://www.sciencedirect.com/science/article/pii/S1051200417302361}
-}
-
-
-@inproceedings{yildiz18real,
-    abbr={SoftwareX},
-    author = {Yıldız, Çağatay and Kurt, Baris and Ceritli, Taha and Sankur, Bulent and Cemgil, Taylan},
-    booktitle = {SoftwareX},
-    title = {A real-time SIP network simulation and monitoring system},
-    year = {2018},
-    abstract={In this work we present a real time SIP network simulation and monitoring system. The SIP network simulator is based on a probabilistic generative model that mimics a social network of VoIP subscribers calling each other at random times. The monitoring system, installed at a SIP server, provides services for collecting network data and server statistics in real time. The system provides a robust framework for developing SIP network applications such as security monitors.},
-    pdf={https://www.sciencedirect.com/science/article/pii/S2352711017300614},
-    html={https://www.sciencedirect.com/science/article/pii/S2352711017300614},
-    code={https://github.com/ElsevierSoftwareX/SOFTX-D-17-00001}
-}
-
-
-@inproceedings{yildiz17real,
-    abbr={SIU},
-    author = {Yıldız, Çağatay and Bingol, Haluk and  Irim-Celik, Gulcin and Aktekin, Berrin and Aykut-Bingol, Canan},
-    booktitle = {25th Signal Processing and Communications Applications Conference},
-    title = {A Bayesian change point model for epileptic seizure detection},
-    year = {2017},
-    abstract={Epilepsy is a chronic neurological disorder in which the normal pattern of neuronal activity in the brain becomes disturbed. Identification of the brain region that is abnormally active during an epileptic seizure is vital for epilepsy surgery. One way of achieving so is to collect electroencephalography (EEG) signals from epileptic people and then to identify the active region as a seizure occurs. In this work, we present a Bayesian change point model that detects when seizures occur. We applied our method to a data set that contains 48 EEG and electrocardiography (EKG) record pairs collected from epileptic people and observed that the model is able to detect all seizures.},
-    pdf={epilepsy.pdf},
-    html={https://ieeexplore.ieee.org/document/7960273}
-}
-
-
-@inproceedings{kurt2016dictionary,
-    abbr={Workshop},
-    author = {Ceritli, Taha and Kurt, Baris and Yıldız, Çağatay and Sankur, Bulent and Cemgil, Taylan},
-    booktitle = {ICML Anomaly Detection Workshop},
-    title = {A Dictionary Learning Based Anomaly Detection Method for Network Traffic Data},
-    year = {2016},
-    abstract={In this paper we propose a dictionary learning scheme to extract network traffic pattern templates for different types of anomalies and the normal traffic via nonnegative matrix factorization. We employ Bayesian change point models on the representation of the running network traffic in terms of those templates to detect network anomalies. Our proposed methods are tested and evaluated on a simulated SIP network with attacks generated by a commercial network vulnerability scanning tool.},
-    pdf={a-dictionary-learning-based.pdf},
-    poster={a-dictionary-learning-based-poster.pdf}
-}
-
-
-
-
-@inproceedings{yildiz2016bayesci,
-    abbr={SIU},
-    author = {Yıldız, Çağatay and Ceritli, Taha and Kurt, Baris and Sankur, Bulent and Cemgil, Taylan},
-    booktitle = {IEEE Singal Processing and Communications Applications},
-    title = {Attack Detection in VOIP Networks Using Bayesian Multiple Change-Point Models},
-    year = {2016},
-    abstract={One of the most commonly used network protocols in Internet telephony services is SIP. As the popularity of the protocol increases, SIP networks have become targets of DDoS attacks more frequently. In this work, we propose a Bayesian change point model to detect anomalies due to such attacks. The model monitors the network and alarms when a change in the network traffic occurs. We test the model with a data set generated by network traffic and attack simulators.},
-    pdf={bayesci-coklu-degisim.pdf},
-    html={https://ieeexplore.ieee.org/document/7960273}
-}
-
-
-
-@inproceedings{kurt2016probabilistic,
-    abbr={SIU},
-    author = {Kurt, Baris and Yıldız, Çağatay and Ceritli, Taha and Yamac, Mehmet and Semerci, Murat and Sankur, Bulent and Cemgil, Taylan},
-    booktitle = {IEEE Singal Processing and Communications Applications},
-    title = {A Probabilistic SIP Network Simulation System},
-    year = {2016},
-    abstract={Experimenting with large-scale real world data is crucial for the development of network  protocol and investigate their performance. However, collecting such data from real networks, and  especially to annotate them with ground truth proves to, if not impossible, too tedious. In such cases use of simulated data, generated for various network scenarios, becomes a plausible alternative. To this purpose, we have developed a SIP network simulation system that employs probabilistic network model and we have demonstrated its use for the performance analysis of statistical (D)DOS attack detectors.},
-    pdf={olasiliksal-sip-agi.pdf}
+@book{przibram1967letters,
+  bibtex_show={true},
+  title={Letters on wave mechanics},
+  author={Einstein, Albert and Schrödinger, Erwin and Planck, Max and Lorentz, Hendrik Antoon and Przibram, Karl},
+  year={1967},
+  publisher={Vision},
+  preview={wave-mechanics.gif}
 }
