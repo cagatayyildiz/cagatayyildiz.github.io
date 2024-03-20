@@ -23,9 +23,13 @@ I'm a postdoctoral researcher at the [Bethge Lab](http://bethgelab.org/){:target
 
 My postdoctoral studies are about a mixed bag of machine learning models. I work on
 - Lie auto-encoders with [Tolga](https://www.imperial.ac.uk/people/t.birdal) and [Matthias](https://bethgelab.org/).
-- lifelong disentangled learning with [Sebastian](https://scholar.google.com/citations?user=8vAIQXoAAAAJ&hl=en) and [Matthias](https://bethgelab.org/).
-- continual large language models with [Beyza](https://scholar.google.com/citations?user=v2cMiCAAAAAJ&hl=en&oi=ao).
 - identifiably dynamical systems with [Çağlar](https://www.aalto.fi/en/people/caglar-hizli) and [Pekka](https://scholar.google.com/citations?hl=en&user=id47-5cAAAAJ).
+- optimization for LLMs with Firat and [Beyza](https://scholar.google.com/citations?user=v2cMiCAAAAAJ&hl=en&oi=ao).
+
+I'm supervising three MSc thesis:
+- diffusion models for sketch generation.
+- realistic online continual learning.
+- knowledge organization for continual question answering.
 
 My name is super easy to pronounce: [chaa-tai](https://forvo.com/word/%C3%A7a%C4%9Fatay/){:target="\_blank"}.
 
