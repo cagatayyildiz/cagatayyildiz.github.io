@@ -2,20 +2,25 @@
   type: map
   contents:
     - name: Full Name
-      value: Çağatay Yıldız
+      value: Albert Einstein
     - name: Date of Birth
-      value: 10th June 1991
+      value: 14th March 1879
     - name: Languages
-      value: English, Turkish
+      value: English, German
 
 - title: Education
   type: time_table
   contents:
     - title: PhD
-      institution: Aalto University, Helsinki, Finland
-      year: 2022
+      institution: University of Zurich, Zurich, Switzerland
+      year: 1905
       description:
-        - Thesis title: Differential Equations for Machine Learning
+        - Description 1.
+        - Description 2.
+        - title: Description 3.
+          contents:
+            - Sub-description 1.
+            - Sub-description 2.
     - title: Federal teaching diploma
       institution: Eidgenössische Technische Hochschule, Zurich, Switzerland
       year: 1900
