@@ -4,7 +4,7 @@ title:  Sınırların ötesi
 date:   2024-03-17 09:19:16
 description: göç, psikoterapi, yapay zeka, ilişkiler
 tags: turkish
-categories: psikoterapi
+categories: psikoterapi, meetings
 giscus_comments: true
 related_posts: false
 ---
