@@ -1,10 +1,21 @@
 ---
 ---
 
+@inproceedings{hizli2024identification,
+    abbr={submitted},
+    author={Hızlı, Çağlar and Yıldız, Çağatay and Bethge, Matthias and John, ST and Marttinen, Pekka},
+    booktitle = {Advances in Neural Information Processing Systems},
+    title={Identifying latent state transition in non-linear dynamical systems},
+    year = {2024},
+    pdf={https://arxiv.org/pdf/2406.03337},
+    abstract={This work aims to improve generalization and interpretability of dynamical systems by recovering the underlying lower-dimensional latent states and their time evolutions. Previous work on disentangled representation learning within the realm of dynamical systems focused on the latent states, possibly with linear transition approximations. As such, they cannot identify nonlinear transition dynamics, and hence fail to reliably predict complex future behavior. Inspired by the advances in nonlinear ICA, we propose a state-space modeling framework in which we can identify not just the latent states but also the unknown transition function that maps the past states to the present. We introduce a practical algorithm based on variational auto-encoders and empirically demonstrate in realistic synthetic settings that we can (i) recover latent state dynamics with high accuracy, (ii) correspondingly achieve high future prediction accuracy, and (iii) adapt fast to new environments.},
+    selected={true}
+}
+
 @inproceedings{yildiz2024investigating,
     abbr={submitted},
-    author={Yıldız, Çağatay and Ravichandran, Nishaanth Kanna and Punia, Prishruit and Bethge, Matthias and Ermis, Beyza},
-    booktitle = {Lifelong Learning Agents},
+    author={Yıldız, Çağatay and Ravichandran, Nishaanth Kanna and Bethge, Matthias and Ermis, Beyza},
+    booktitle = {Empirical Methods in Natural Language Processing},
     title={Investigating Continual Pretraining in Large Language Models: Insights and Implications},
     year = {2024},
     pdf={https://arxiv.org/pdf/2402.17400v1.pdf},
@@ -13,12 +24,12 @@
 }
 
 @inproceedings{dziadzio2024infinite,
-    abbr={submitted},
+    abbr={CoLLAs},
     author={Dziadzio, Sebastian and Yıldız, Çağatay and van de Ven, Gido and Trzcinski, Tomasz and Tuytelaars, Tinne and Bethge, Matthias},
     booktitle = {Lifelong Learning Agents},
     title={Infinite dSprites for Disentangled Continual Learning: Separating Memory Edits from Generalization},
     year = {2024},
-    pdf={https://arxiv.org/pdf/2312.16731.pdf},
+    pdf={https://arxiv.org/pdf/2312.16731v2},
     abstract={The ability of machine learning systems to learn continually is hindered by catastrophic forgetting, the tendency of neural networks to overwrite existing knowledge when learning a new task. Continual learning methods alleviate this problem through regularization, parameter isolation, or rehearsal, but they are typically evaluated on benchmarks comprising only a handful of tasks. In contrast, humans are able to learn continually in dynamic, open-world environments, effortlessly achieving one-shot memorization of unfamiliar objects and reliably recognizing them under various transformations. To make progress towards closing this gap, we introduce Infinite dSprites, a parsimonious tool for creating continual classification and disentanglement benchmarks of arbitrary length and with full control over generative factors. We show that over a sufficiently long time horizon, the performance of all major types of continual learning methods deteriorates on this simple benchmark. Thus, Infinite dSprites highlights an important aspect of continual learning that has not received enough attention so far: given a finite modelling capacity and an arbitrarily long learning horizon, efficient learning requires memorizing class-specific information and accumulating knowledge about general mechanisms. In a simple setting with direct supervision on the generative factors, we show how learning class-agnostic transformations offers a way to circumvent catastrophic forgetting and improve classification accuracy over time. Our approach sets the stage for continual learning over hundreds of tasks with explicit control over memorization and forgetting, emphasizing open-set classification and one-shot generalization.},
     selected={true}
 }
