@@ -26,10 +26,10 @@ My postdoctoral studies are about a mixed bag of machine learning models. I work
 - identifiably dynamical systems with [Çağlar](https://www.aalto.fi/en/people/caglar-hizli) and [Pekka](https://scholar.google.com/citations?hl=en&user=id47-5cAAAAJ).
 - optimization for LLMs with Firat and [Beyza](https://scholar.google.com/citations?user=v2cMiCAAAAAJ&hl=en&oi=ao).
 
-I'm supervising three MSc thesis:
-- diffusion models for sketch generation.
-- realistic online continual learning.
-- knowledge organization for continual question answering.
+I'm supervising three MSc theses:
+- realistic online continual learning (with Joschka Strüber).
+- knowledge organization for continual question answering (with Atahan Özer).
+- mechanistic understanding of forgetting in LLMs (with Nitin Sharma).
 
 My name is super easy to pronounce: [chaa-tai](https://forvo.com/word/%C3%A7a%C4%9Fatay/){:target="\_blank"}.
 
