@@ -19,18 +19,20 @@ selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 ---
 
-I'm a postdoctoral researcher at the [Bethge Lab](http://bethgelab.org/){:target="\_blank"}, University of Tuebingen. During my doctoral studies, I was supervised by [Harri Lähdesmäki](https://users.ics.aalto.fi/harrila/){:target="\_blank"} at Aalto University, Finland. Before that, I worked with [Taylan Cemgil](https://www.cmpe.boun.edu.tr/~cemgil/){:target="\_blank"} in my Master's degree at Bogazici University, Istanbul. 
+I'm a postdoctoral researcher at the [Bethge Lab](http://bethgelab.org/){:target="\_blank"}, University of Tuebingen. During my doctoral studies, I was supervised by [Harri Lähdesmäki](https://users.ics.aalto.fi/harrila/){:target="\_blank"} at Aalto University, Finland. Before that, I worked with [Taylan Cemgil](https://www.cmpe.boun.edu.tr/~cemgil/){:target="\_blank"} in my Master's degree at Bogazici University, Istanbul.
 
-My postdoctoral studies are about a mixed bag of machine learning models. I work on
+- My name is super easy to pronounce: [chaa-tai](https://forvo.com/word/%C3%A7a%C4%9Fatay/){:target="\_blank"}.
+- Check out [Markus' guideline for PhD students](https://users.aalto.fi/~heinom10/guidelines.html){:target="\_blank"}.
+
+#### Ongoing projects
 - Lie auto-encoders with [Tolga](https://www.imperial.ac.uk/people/t.birdal) and [Matthias](https://bethgelab.org/).
-- identifiably dynamical systems with [Çağlar](https://www.aalto.fi/en/people/caglar-hizli) and [Pekka](https://scholar.google.com/citations?hl=en&user=id47-5cAAAAJ).
-- optimization for LLMs with Firat and [Beyza](https://scholar.google.com/citations?user=v2cMiCAAAAAJ&hl=en&oi=ao).
+- LLM domain adaptation with Firat and [Beyza](https://scholar.google.com/citations?user=v2cMiCAAAAAJ&hl=en&oi=ao).
 
-I'm supervising three MSc theses:
-- realistic online continual learning (with Joschka Strüber).
-- knowledge organization for continual question answering (with Atahan Özer).
-- mechanistic understanding of forgetting in LLMs (with Nitin Sharma).
+#### MSc theses I currectly supervised 
+- Realistic online continual learning (with Joschka Strüber).
+- Knowledge organization for continual question answering (with Atahan Özer).
+- Mechanistic understanding of forgetting in LLMs (with Nitin Sharma).
 
-My name is super easy to pronounce: [chaa-tai](https://forvo.com/word/%C3%A7a%C4%9Fatay/){:target="\_blank"}.
-
-Check out [Markus' guideline for PhD students](https://users.aalto.fi/~heinom10/guidelines.html){:target="\_blank"}.
+#### Looking for projects?
+- Linear algebraic compression of transformers for efficient inference?
+- Continual learning of transformers by low-rank reduction?
