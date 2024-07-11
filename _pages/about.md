@@ -27,6 +27,7 @@ I'm a postdoctoral researcher at the [Bethge Lab](http://bethgelab.org/){:target
 #### Ongoing projects
 - Lie auto-encoders with [Tolga](https://www.imperial.ac.uk/people/t.birdal) and [Matthias](https://bethgelab.org/).
 - LLM domain adaptation with Firat and [Beyza](https://scholar.google.com/citations?user=v2cMiCAAAAAJ&hl=en&oi=ao).
+- Continuous-time optimal control with David Leeftink and Steffen Ridderbusch.
 
 #### MSc theses I currectly supervised 
 - Realistic online continual learning (with Joschka Strüber).
@@ -36,4 +37,4 @@ I'm a postdoctoral researcher at the [Bethge Lab](http://bethgelab.org/){:target
 #### Looking for projects?
 - Linear algebraic compression of transformers for efficient inference.
 - Continual learning of transformers by low-rank reduction.
-- Personalized LLMs by RAG.
+- Personalized LLMs via RAG.
