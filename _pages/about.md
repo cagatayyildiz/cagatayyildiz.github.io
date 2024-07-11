@@ -34,5 +34,6 @@ I'm a postdoctoral researcher at the [Bethge Lab](http://bethgelab.org/){:target
 - Mechanistic understanding of forgetting in LLMs (with Nitin Sharma).
 
 #### Looking for projects?
-- Linear algebraic compression of transformers for efficient inference?
-- Continual learning of transformers by low-rank reduction?
+- Linear algebraic compression of transformers for efficient inference.
+- Continual learning of transformers by low-rank reduction.
+- Personalized LLMs by RAG.
