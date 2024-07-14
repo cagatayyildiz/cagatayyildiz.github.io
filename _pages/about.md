@@ -38,3 +38,4 @@ I'm a postdoctoral researcher at the [Bethge Lab](http://bethgelab.org/){:target
 - Linear algebraic compression of transformers for efficient inference.
 - Continual learning of transformers by low-rank reduction.
 - Personalized LLMs via RAG.
+- Continual handwriting recognition and its adaptation.
