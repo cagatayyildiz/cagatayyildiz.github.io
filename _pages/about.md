@@ -23,6 +23,7 @@ I'm a postdoctoral researcher at the [Bethge Lab](http://bethgelab.org/){:target
 
 - My name is super easy to pronounce: [chaa-tai](https://forvo.com/word/%C3%A7a%C4%9Fatay/){:target="\_blank"}.
 - Check out [Markus' guideline for PhD students](https://users.aalto.fi/~heinom10/guidelines.html){:target="\_blank"}.
+- [Do you think you want to do a PhD?](https://co2.ini.uzh.ch/Openings/warning.html){:target="\_blank"}
 
 #### Ongoing projects
 - Lie auto-encoders with [Tolga](https://www.imperial.ac.uk/people/t.birdal) and [Matthias](https://bethgelab.org/).
