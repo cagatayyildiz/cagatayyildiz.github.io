@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  Peer reviewing in ML
-date:   2024-04-14 21:52:16
+date:   2024-10-6 21:52:16
 description: review, ML
 tags: english
 categories: articles
