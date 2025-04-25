@@ -44,3 +44,9 @@ jobs:
           fail: true
           # only check local links
           args: --offline --remap '_site(/?.*)/assets/(.*) _site/assets/$2' --verbose --no-progress '_site/**/*.html'
+      - name: Exclude specific files
+        run: |
+          exclude_files=("dm-800.webp" "1-1400.webp")
+          for file in "${exclude_files[@]}"; do
+            sed -i "/$file/d" _site/**/*.html
+          done
