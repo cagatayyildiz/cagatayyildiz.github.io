@@ -24,10 +24,10 @@ I'm a postdoctoral researcher with [Claire Vernade](https://www.cvernade.com/){:
 My name is super easy to pronounce: [chaa-tai](https://forvo.com/word/%C3%A7a%C4%9Fatay/){:target="\_blank"}.
 
 #### Staying sane in science
-- [On the culture of science (3 videos)](https://www.youtube.com/watch?v=HDcgWtfoKy4)
-- [Do you think you want to do a PhD?](https://co2.ini.uzh.ch/Openings/warning.html)
-- [How to choose a good research question](https://www.sciencedirect.com/science/article/pii/S1097276509006418)
-- [Markus' guideline for PhD students](https://users.aalto.fi/~heinom10/guidelines.html).
+- [On the culture of science (3 videos)](https://www.youtube.com/watch?v=HDcgWtfoKy4){:target="\_blank"}
+- [Do you think you want to do a PhD?](https://co2.ini.uzh.ch/Openings/warning.html){:target="\_blank"}
+- [How to choose a good research question](https://www.sciencedirect.com/science/article/pii/S1097276509006418){:target="\_blank"}
+- [Markus' guideline for PhD students](https://users.aalto.fi/~heinom10/guidelines.html){:target="\_blank"}
 
 #### Ongoing projects
 - Object-level self-supervised learning
