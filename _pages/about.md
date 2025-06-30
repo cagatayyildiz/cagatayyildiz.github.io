@@ -30,6 +30,7 @@ My name is super easy to pronounce: [chaa-tai](https://forvo.com/word/%C3%A7a%C4
 - [Markus' guideline for PhD students](https://users.aalto.fi/~heinom10/guidelines.html){:target="\_blank"}
 
 #### Ongoing projects
+- Giving teachers formative feedback using LLMs
 - Object-level self-supervised learning from videos
 - Efficient transformers via attention kernelization
 - Mechanistic understanding of LLMs
