@@ -19,7 +19,7 @@ selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 ---
 
-I'm a postdoctoral researcher with [Claire Vernade](https://www.cvernade.com/){:target="\_blank"} and a member of the [Cluster of Excellence Machine Learning for Science ](https://uni-tuebingen.de/en/133840){:target="\_blank"} at the University of Tuebingen. Previously, I was a postdoc at the [Bethge Lab](http://bethgelab.org/){:target="\_blank"}. During my doctoral studies, I was supervised by [Harri Lähdesmäki](https://users.ics.aalto.fi/harrila/){:target="\_blank"} at Aalto University, Finland. Before that, I worked with [Taylan Cemgil](https://www.cmpe.boun.edu.tr/~cemgil/){:target="\_blank"} in my Master's degree at Bogazici University, Istanbul.
+I'm a independent postdoctoral researcher at the [Cluster of Excellence Machine Learning for Science ](https://uni-tuebingen.de/en/133840){:target="\_blank"} at the University of Tuebingen, hosted by [Claire Vernade](https://www.cvernade.com/){:target="\_blank"}. Previously, I was a postdoc at the [Bethge Lab](http://bethgelab.org/){:target="\_blank"}. During my doctoral studies, I was supervised by [Harri Lähdesmäki](https://users.ics.aalto.fi/harrila/){:target="\_blank"} at Aalto University, Finland. Before that, I worked with [Taylan Cemgil](https://www.cmpe.boun.edu.tr/~cemgil/){:target="\_blank"} in my Master's degree at Bogazici University, Istanbul.
 
 My name is super easy to pronounce: [chaa-tai](https://forvo.com/word/%C3%A7a%C4%9Fatay/){:target="\_blank"}.
 
@@ -30,16 +30,6 @@ My name is super easy to pronounce: [chaa-tai](https://forvo.com/word/%C3%A7a%C4
 - [Markus' guideline for PhD students](https://users.aalto.fi/~heinom10/guidelines.html){:target="\_blank"}
 
 #### Ongoing projects
-- Object-level self-supervised learning
-- Efficient transformers via attention kernelization (MSc thesis with Karahan Sarıtaş)
+- Object-level self-supervised learning from videos
+- Efficient transformers via attention kernelization
 - Mechanistic understanding of LLMs
-
-#### Looking for projects?
-- Continual learning of transformers by low-rank reduction.
-- Personalized LLMs via RAG.
-
-#### MSc theses I supervised 
-- Mechanistic understanding of forgetting in LLMs (Nitin Sharma).
-- Knowledge organization for continual question answering (Atahan Özer).
-- Realistic online continual learning (Joschka Strüber).
-- Stroke-by-stroke handwriting generation by diffusion models (Hanru Zhang).
