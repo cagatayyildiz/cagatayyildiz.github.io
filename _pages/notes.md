@@ -1,6 +1,6 @@
 ---
 layout: page
-title: ML notes
+title: ML tutorials
 permalink: /notes/
 description: Tutorials, lecture notes, presentations and so on.
 nav: true
