@@ -12,26 +12,26 @@ img: assets/img/etqai/etqai-logo.jpg
 
 Classroom observation is expensive, subjective, and logistically difficult to scale. In Germany, high-quality teaching feedback is constrained not only by cost, but also by strict data protection law and institutional trust requirements.
 
-In the [ETQ-AI (Enhancing Teaching Quality with Artificial Intelligence](https://uni-tuebingen.de/en/faculties/faculty-of-economics-and-social-sciences/subjects/department-of-social-sciences/education-sciences-and-psychology/research/current-studies/etq-ai/) project, our goal is to automate parts of teaching quality assessment: record classroom discourse, transcribe it, and use LLMs to score dimensions such as classroom management and student cognitive engagement. The long-term vision is simple but ambitious:
+In the [ETQ-AI (Enhancing Teaching Quality with Artificial Intelligence)](https://uni-tuebingen.de/en/faculties/faculty-of-economics-and-social-sciences/subjects/department-of-social-sciences/education-sciences-and-psychology/research/current-studies/etq-ai/) project, our goal is to automate parts of teaching quality assessment: record classroom discourse, transcribe it, and use LLMs to score dimensions such as classroom management and student cognitive engagement. The long-term vision is simple but ambitious:
 
 <div class="alert alert-info" role="alert">
   A teacher records a lesson and receives structured, actionable feedback — without a human observer in the room.
 </div>
 
-What sounds like an ML problem quickly became a systems, privacy, and deployment problem. As **the technical lead and product owner for ETQ-AI data collection app**, I owned the full product lifecycle — from system architecture and GDPR compliance to managing the development team. This post details how I bridged the gap between academic ML prototypes and a robust, privacy-first production mobile app used in real German classrooms. Coming from an academic background, a summary of lessons I learned in this applied projecct are:
+What sounds like an ML problem quickly became a systems, privacy, and deployment problem. As the technical lead and product owner for ETQ-AI data collection app, I owned the full product lifecycle, from system architecture and GDPR compliance to managing the development team. This post details how I bridged the gap between academic ML prototypes and a robust, privacy-first production mobile app used in real German classrooms. Coming from an academic background, a summary of lessons I learned in this applied projecct are:
 
-1. Deployment metrics differ so much from benchmarks.
-2. Privacy requires system-level handling.
-3. Model failures can/must be handled architecturally.
+1. Real-world deployment interests differ so much from academic benchmark metrics.
+2. Ensuring privacy requires broad, system-level handling.
+3. Failures of ML models can be handled with minimal engineering efforts.
 4. Infrastructure decisions significantly influence timelines.
-5. Ownership means maintaining coherence.
+5. Ownership of a project requires maintaining coherence across architecture, user needs, compliance, and research goals.
 
 Let's dive deeper into my project!
 
 
 ### 1. The challenge: beyond the model
 
-The core research question was automated teaching quality assessment: can automates speech recognition (ASR) + LLMs replace human raters?
+The core research question was automated teaching quality assessment: can automated speech recognition (ASR) + LLMs replace human raters?
 {% include pipeline-diagram.html %}
 
 However, to answer that, we first needed a reliable data collection pipeline. We needed **recordings from real classrooms** with parental consent, strict GDPR compliance, and a format researchers could actually use. We also needed a user-friendly tool that teachers would actually want to use.
@@ -39,7 +39,7 @@ However, to answer that, we first needed a reliable data collection pipeline. We
 I acted as the bridge between research requirements and engineering reality. My role involved:
 * **Product management:** Defining the scope of data collection, roadmap, and user requirements.
 * **Technical architecture:** Designing the end-to-end data flow and making trade-offs between privacy, latency, and model accuracy.
-* **Team leadership:** Managing two student developers (Usman Amjad and Nitin Jain) who implemented the Flutter frontend, and a PhD student (Puja Maharjan) who buit the ML pipeline.
+* **Team leadership:** Managing two student developers (Usman Amjad and Nitin Jain) who implemented the Flutter frontend, and a PhD student (Puja Maharjan) who built the ML pipeline.
 * **Stakeholder management:** Coordinating between project members and teachers, and translating legal requirements into technical specifications.
 
 ### 2. Starting simple: the recording interface
@@ -89,7 +89,7 @@ We, as researchers, need data on a server to run experiments, but teachers (and 
     Left: Upload confirmation showing both audio and transcript delivered to the server. Right: Granular deletion — teachers can remove data from their device, from the cloud (S3), or both.
 </div>
 
-**Infrastructure strategy:**
+Infrastructure strategy:
 We store uploaded data on **Amazon S3 servers in Frankfurt (eu-central-1)** to ensure that the data stay within the EU. However, for transcription, we utilize [high performance computing (HPC) servers at Göttingen](https://gwdg.de/en/hpc/). Separating storage (Frankfurt) from compute (Göttingen) was a strategic decision I made after mapping the data governance capabilities of each site. GWDG offered the necessary GPU power but was only authorized for transient processing, while AWS provided the compliant long-term storage we needed. Orchestrating the alignment between these sites was a key non-technical challenge I solved.
 
 <div class="row justify-content-sm-center">
@@ -171,15 +171,16 @@ The solution requires properly implementing background audio services — regist
 
 
 ### 5. What I would do differently
-- **Start with deployment constraints:** We initially assumed transcription would be “good enough.” It wasn’t. Downstream components must be designed around noisy, imperfect inputs.
-- **Budget 3x more time for platform-specific issues:** Mobile OS constraints consumed more engineering time than all ML components combined.
-- **Design for the user's worst moment:** If recording fails once during a 45-minute lesson, the tool loses trust. Reliability outweighs sophistication.
+Looking back, I would 
+- **start with deployment constraints.** We initially assumed transcription would be “good enough.” It wasn’t. Downstream components must be designed around noisy, imperfect inputs.
+- **budget 3x more time for platform-specific issues.** Mobile OS constraints consumed more engineering time than all ML components combined.
+- **design for the user's worst moment.** If recording fails once during a 45-minute lesson, the tool loses trust. Reliability outweighs sophistication.
 
 
 
 ### 6. Transferable lessons for applied ML
 This project changed how I think about applied machine learning:
-1. **Benchmarks are not deployment metrics**  Leaderboard performance does not predict out-of-domain robustness.
+1. **Benchmarks are not deployment metrics:**  Leaderboard performance does not predict out-of-domain robustness.
 2. **Privacy is a systems problem:** GDPR influenced storage location, compute separation, consent flows, and deletion logic more than model choice did.
 3. **Model failures can be handled architecturally:** Repetition hallucinations were mitigated through segmentation and orchestration — not model fine-tuning.
 4. **Infrastructure decisions dominate timelines:**  Background execution, mobile OS constraints, and data governance consumed more effort than training experiments.
@@ -192,4 +193,4 @@ Building ETQ-AI data collection app taught me that the interesting engineering p
 
 ---
 
-*ETQ-AI is a joint project between the [Hector Research Institute of Education Sciences and Psychology](https://uni-tuebingen.de/en/faculties/faculty-of-economics-and-social-sciences/subjects/department-of-social-sciences/education-sciences-and-psychology/institute/) and the [Cluster of Excellence "Machine Learning for Science"](https://uni-tuebingen.de/en/research/core-research/cluster-of-excellence-machine-learning/home/) at the University of Tübingen. The app was implemented by Usman Amjad and Nitin Jain.*
+*ETQ-AI is a joint project between the [Hector Research Institute of Education Sciences and Psychology](https://uni-tuebingen.de/en/faculties/faculty-of-economics-and-social-sciences/subjects/department-of-social-sciences/education-sciences-and-psychology/institute/) and the [Cluster of Excellence "Machine Learning for Science"](https://uni-tuebingen.de/en/research/core-research/cluster-of-excellence-machine-learning/home/) at the University of Tübingen. The app was implemented by Usman Amjad and Nitin Jain. ML experiments were conducted by Puja Maharjan.*

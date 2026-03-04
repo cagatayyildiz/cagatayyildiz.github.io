@@ -1,7 +1,7 @@
 ---
 layout: mediumpost
 title: "ODIS: Object-level self-distillation"
-description: "What I learned building ODIS: engineering an object-level vision pretraining system"
+description: "engineering an object-level vision pretraining system"
 date: 2025-07-01
 category: [work]
 tags: vision-transformers, self-supervised-learning, distributed-training, pytorch
@@ -10,37 +10,37 @@ img: assets/img/etqai/etqai-logo.jpg
 ---
 
 
-> This post is about the engineering lessons from building [ODIS](https://arxiv.org/abs/2506.05409) — *Object-level Self-Distillation* — a pretraining method for Vision Transformers that uses bounding boxes to improve representation quality. I'll focus on what it took to make the system actually work: the architecture changes, the distributed training pitfalls, and the experiments that failed before the ones that succeeded. Paper conclusions are in the paper; what follows is the story behind them.
+> This post is about the lessons from building [ODIS](https://arxiv.org/abs/2506.05409) — *Object-level Self-Distillation* — a pretraining method for Vision Transformers that uses bounding boxes to improve representation quality. I'll focus on what it took to make the system actually work: the architecture changes, the distributed training pitfalls, and the experiments that failed before the ones that succeeded. Paper conclusions are in the paper; what follows is the story behind them.
 >
-> One aside before we start: the problem ODIS addresses — scenes containing multiple semantically distinct regions — is especially acute in domains like **digital pathology**, where a single image patch routinely contains multiple tissue types, cell populations, and morphological structures. The inability of standard self-distillation to handle this ambiguity is one reason we believe object-level pretraining is a direction worth pursuing beyond natural image benchmarks.
+> While the experiments in the paper use natural image benchmarks, the problem ODIS addresses (scenes containing multiple semantically distinct regions) shows up everywhere. It is especially acute in digital pathology, where a single image patch routinely contains multiple tissue types, cell populations, and morphological structures. That domain is a large part of why we think object-level pretraining matters beyond ImageNet numbers.
 
 ---
 
 ### Background: self-distillation
 
-DINO and iBOT train a vision transformer by running two augmented views of the same image through a student and a mean-teacher network, then minimising cross-entropy between their output probability vectors. The teacher is never backpropagated through, it's updated as an exponential moving average of the student. The student learns a `[CLS]` token that summarises the full image, and in iBOT's case, also learns to predict masked patches from unmasked context.
+[DINO](https://arxiv.org/abs/2104.14294) and [iBOT](https://arxiv.org/abs/2111.07832) train a vision transformer by running two augmented views of the same image through a student and a mean-teacher network, then minimising cross-entropy between their output probability vectors. The teacher is never backpropagated through, it's updated as an exponential moving average of the student. The student learns a `[CLS]` token that summarises the full image, and in iBOT's case, also learns to predict masked patches from unmasked context.
 
 <figure style="text-align: center;">
 <img src="/assets/img/odis/dino.png" alt="Image-level self-distillation" style="max-width: 700px;"/>
-  <figcaption>Standard image-level self-distillation: teacher and student independently crop from the same image, then the student is trained to match the teacher's `[CLS]` output by cross entropy (classification) loss. If they crop different objects, the loss signal is inconsistent.</figcaption>
+  <figcaption>Standard image-level self-distillation: teacher and student independently crop from the same image, then the student is trained to match the teacher's [CLS] output by cross entropy (classification) loss. If they crop different objects, the loss signal is inconsistent.</figcaption>
 </figure>
 
-**The key assumption is that different augmentations of the same image preserve the same *semantic content***. For more depth on DINO/iBOT, the original papers are the right place to start ([Caron et al. 2021](https://arxiv.org/abs/2104.14294), [Zhou et al. 2021](https://arxiv.org/abs/2111.07832)).
+**The key assumption is that different augmentations of the same image preserve the same *semantic content***. For more depth on DINO/iBOT, the original papers are the right place to start: [DINO (Caron et al. 2021)](https://arxiv.org/abs/2104.14294), [iBOT (Zhou et al. 2021)](https://arxiv.org/abs/2111.07832).
 
 ---
 
 ### The problem: random crops break the shared-content assumption
 
-The standard data augmentation pipeline includes random resized crop, colour jitter, flip, etc. They are fast to execute, agnostic to image size, and works well for object-centric datasets. But it has a structural flaw: there is no mechanism to guarantee that the teacher and student receive crops containing the *same object*.
+The standard data augmentation pipeline includes random resized crop, colour jitter, flip, etc. They are fast to execute, agnostic to image size, and works well for datasets with central, salient objects. But it has a structural flaw: there is no mechanism to guarantee that the teacher and student receive crops containing the *same object*.
 
-This matters more than it might seem. Roughly 20% of ImageNet-1K images contain objects from multiple distinct classes ([Tsipras et al., 2020](https://arxiv.org/abs/2002.11379)). Consider a typical barn scene: the teacher's random crop lands on the cow, the student's crop lands on the barn. The self-distillation loss now pushes the student's "barn" representation towards matching the teacher's "cow" representation. Hence, the supervision signal is often (slightly) wrong about everything in multi-object scenes.
+This matters more than it might seem. Roughly 20% of ImageNet-1K images contain objects from multiple distinct classes ([Tsipras et al., 2020](https://arxiv.org/abs/2002.11379)). Consider a typical barn scene like below: the teacher's random crop lands on the ox while the student's crop lands on the barn. The self-distillation loss now pushes the student's "barn" representation towards matching the teacher's "ox" representation. Hence, the supervision signal is often (slightly) wrong about everything in multi-object scenes.
 
 <figure style="text-align: center;">
   <img src="/assets/img/odis/random-crop-problem.png" alt="Multi-object crop inconsistency" style="max-width: 500px;"/>
   <figcaption>Teacher crops onto the ox; student crops onto the barn. The cross-entropy loss treats these as equivalent views of the same content while they aren't.</figcaption>
 </figure>
 
-The fix is conceptually simple: tell both networks which object to look at. The challenge is doing this without breaking the things that make self-distillation work.
+**The fix is conceptually simple: tell both networks which object to look at. The challenge is doing this without breaking the things that make self-distillation work.**
 
 ---
 
@@ -57,7 +57,7 @@ ODIS replaces the `[CLS]` token, which summarises the whole image, with an `[OBJ
   <figcaption>ODIS: object-aware crops guarantee view consistency, while masked attention concentrates the [OBJ] token on the target object region at every layer.</figcaption>
 </figure>
 
-We perform an ablation verifying we *need both*. Only cropping images captures most of the gain but not all. Only masked-attention underperforms because the views are not aligned. Only together they provide clean alignment *and* clean aggregation.
+We perform an ablation verifying *we need both*. Only cropping images captures most of the gain but not all. Only masked-attention underperforms because the views are not aligned. Only together they provide clean alignment *and* clean aggregation.
 
 **Results:** At the end, our approach improved the k-NN accuracy on ImageNet by +1.2% over iBOT (for context, the improvement from DINO to iBOT at ViT-B scale was +1.0 pp). This improvement grows with model scale. ODIS also transfers better to unseen datasets, which I find most practically significant. A model that generalises better across domains without any fine-tuning is a more useful backbone — the kind of thing that matters when deploying into a production system without dataset-specific fine-tuning for every new task.
 
@@ -98,15 +98,15 @@ The computational overhead of this modification is **~1%** (10:40 min/epoch for 
 <details markdown="1">
 <summary><h3 style="display:inline">Implementation deep-dive: distributed training</h3></summary>
 
-ODIS uses **data parallelism** — the model is replicated on every GPU, and each copy processes a different shard of the batch. This is the right choice when the model fits in a single GPU's memory, which ViT-S/B comfortably do. The alternative, model parallelism, splits the model itself across GPUs and is reserved for models too large to fit on one device, e.g., LLMs. Data parallelism is simpler and scales well, but it requires careful synchronization to keep replicas in agreement.
+ODIS uses **data parallelism**: the model is replicated on every GPU, and each copy processes a different shard of the batch. This is the right choice when the model fits in a single GPU's memory, which ViT-S/B comfortably do. The alternative, model parallelism, splits the model itself across GPUs and is reserved for models too large to fit on one device, e.g., LLMs. Data parallelism is simpler and scales well, but it requires careful synchronization to keep replicas in agreement.
 
-Two components wire this up in PyTorch. The `DistributedSampler` ensures each GPU sees a disjoint slice of the dataset each epoch:
+Two components are crucial in PyTorch implementation. The `DistributedSampler` ensures each GPU sees a disjoint slice of the dataset each epoch:
 ```python
 sampler = torch.utils.data.DistributedSampler(dataset, shuffle=True)
 data_loader = torch.utils.data.DataLoader(dataset, sampler=sampler, ...)
 ```
 
-`DistributedDataParallel` wraps the student, the module whose parameters are updated, and hooks into the backward pass to average gradients across GPUs via `all_reduce` before `optimizer.step()`. Under the hood, `all_reduce` is a ring operation: GPUs are arranged in a ring and exchange partial sums with their neighbors in `N-1` steps. One more round of exchange sends the globally averaged gradients to all GPUs. All happens with all GPUs talking to only two immediate neighbors:
+`DistributedDataParallel` wraps the student, the module whose parameters are updated, and hooks into the backward pass to average gradients across GPUs via `all_reduce` before `optimizer.step()`. Under the hood, `all_reduce` is a ring operation: GPUs are arranged in a ring and exchange partial sums of the gradients with their neighbors in `N-1` steps. One more round of exchange sends the globally averaged gradients to all GPUs. All happens with all GPUs talking to only two immediate neighbors:
 ```python
 student = nn.parallel.DistributedDataParallel(student, device_ids=[args.gpu])
 ...
@@ -116,16 +116,16 @@ optimizer.step()  # identical update on every GPU
 
 The teacher is intentionally *not* DDP-wrapped. Instead, it lives as an independent copy on each GPU. This is fine since it has no gradients and is updated purely as an exponential moving avarage of the student:
 ```python
-# params_q and params_k are student and teacher parameters
+# params_s and params_t are student and teacher parameters
 with torch.no_grad():
     m = momentum_schedule[it]
-    for param_q, param_k in zip(params_q, params_k):
-        param_k.data.mul_(m).add_((1 - m) * param_q.detach().data)
+    for param_s, param_t in zip(params_s, params_t):
+        param_t.data.mul_(m).add_((1 - m) * param_s.detach().data)
 ```
 
 Since all GPUs apply this update to identical student parameters (kept in sync by DDP), the teacher copies naturally stay identical across GPUs without any explicit communication.
 
-The one place where explicit distributed ops *are* needed is the loss centering. The teacher center, a running mean used to prevent representation collapse, must be consistent across GPUs, so it requires a manual `all_reduce`:
+**Important note:** The one place where explicit distributed ops *are* needed is the loss centering. The teacher center, a running mean used to prevent representation collapse, must be consistent across GPUs, so it requires a manual `all_reduce`:
 ```python
 obj_center = torch.sum(teacher_obj, dim=0, keepdim=True)
 dist.all_reduce(obj_center)
@@ -155,7 +155,7 @@ The core insight of ODIS is that utilizing consistent object-level targets durin
 
 More practically, as foundation model APIs for bounding box extraction continue to improve (e.g., Grounding DINO, SAM variants), the cost of obtaining object annotations for arbitrary image datasets approaches zero. ODIS shows that even imperfect, class-agnostic boxes from off-the-shelf detectors produce measurable improvements over no boxes at all. Ground-truth boxes are better, but not required.
 
-The takeaway for anyone building pretraining pipelines if bounding boxes are available, use them. The marginal cost of adding object-aware cropping and masked attention is ~1% training overhead. The marginal gain compounds with model scale, that's a good trade-off.
+The takeaway for anyone building pretraining pipelines if bounding boxes are available, use them. The marginal gain increases with model scale, that's a good trade-off.
 
 ---
 
