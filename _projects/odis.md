@@ -6,7 +6,7 @@ date: 2025-07-01
 category: [work]
 tags: vision-transformers, self-supervised-learning, distributed-training, pytorch
 importance: 1
-img: assets/img/etqai/etqai-logo.jpg
+img: assets/img/odis.png
 ---
 
 
