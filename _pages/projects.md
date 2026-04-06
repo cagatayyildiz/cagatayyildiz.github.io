@@ -2,7 +2,7 @@
 layout: page
 title: applied projects
 permalink: /projects/
-description: A growing collection of your cool projects.
+description: A collection of my projects requiring smart engineering.
 nav: true
 nav_order: 3
 display_categories: [work]
