@@ -1,6 +1,40 @@
 ---
 ---
 
+@inproceedings{oncel2026kernel,
+    abbr={NeurIPS},
+    author={Öncel, Fırat and Subakan, Cem and Ravanelli, Mirco and Yıldız, Çağatay},
+    booktitle = {Advances in Neural Information Processing Systems},
+    title={The Kernel Reality Check: Benchmarking and Distilling Efficient Attention at Scale},
+    year = {2026},
+    code={https://github.com/firatoncel/KernelRealityCheckNeurIPS2026},
+    poster={kernel_reality_check_poster.pdf},
+    abstract={Kernelized attention methods, which aim to replace the O(N^2) complexity of softmax attention with O(N) alternatives, have been the focus of intense research in the last five years. Despite growing interest, systematic evaluations and fair comparisons across approaches and scales are still missing. We analyze kernelized attention in two halves and highlight prominent limitations on each. On efficiency, FlashAttention achieves lower memory consumption and faster wall-clock time than SOTA kernelized methods during training and in vision transformers across most sequence lengths (with inference-time memory in causal language models the only clear exception), contradicting the core assumption for pure kernelized attention used as a drop-in replacement for softmax. We also discover that reported efficiency gains often fail to reproduce against modern baselines. On quality, current kernelized methods leave gaps of 2-10 points relative to softmax under a unified distillation protocol, and these gaps do not close with model scale. We show this gap is not intrinsic to kernelization: LARA++, a principled extension of LARA that approximates softmax via importance sampling with adaptive proposal distributions, recovers up to 99% of softmax accuracy. We establish that the gap is closable; however, the computational overhead remains substantial, leaving the efficiency wall intact.},
+    selected={true}
+}
+
+@inproceedings{jain2027labelfree,
+    abbr={AAAI},
+    author={Jain, Nitin and Fütterer, Tim and Bühler, Babette and Yıldız, Çağatay},
+    booktitle = {AAAI Conference on Artificial Intelligence (Innovative Applications of AI)},
+    title={Label-Free Role-Aware Segmentation of Classroom Recordings: Recovering the Teacher from Transferable Structure},
+    year = {2027},
+    abstract={How much the teacher talks and when are among the most informative and costly-to-measure signals of teaching. Yet, classroom audio is among the most sensitive data an AI system can process: recordings capture minors and fall under GDPR, preventing raw audio from leaving the recording device. We present a teacher-student segmentation pipeline designed to meet exactly this constraint: label-free at inference, running on a recording device, and requiring no per-session calibration. The pipeline chains a lightweight voice activity detector, compactly pretrained speaker embeddings, agglomerative clustering, and a small logistic regression that assigns the teacher role based on session-relative structure rather than voice identity. We show that our structural cue transfers across classrooms, languages, and acoustic conditions. In leave-one-teacher-out cross-validation on 292 recordings from 63 teachers across English and German corpora, our pipeline achieves teacher F1 of 0.81 and 0.87, respectively, outperforming both enrollment-based baselines and a 30-second supervised enrollment ceiling. On a commodity smartphone, its performance matches pyannote, a strong neural diarization tool, while running 4.8x faster at comparable peak memory at a real-time factor of ~0.18. We also find that transcribing filtered audio only marginally increases teacher's word error rate from 0.26 to 0.28. Residual failures concentrate where teacher and student voices are not acoustically separable. However, we show how to flag these sessions label-free at inference so that they can be routed to human review, enabling selective, privacy-preserving deployment.},
+    selected={true}
+}
+
+@inproceedings{oncel2026timeincremental,
+    abbr={preprint},
+    author={Öncel, Fırat and Ali, Salman Hussain and Ravanelli, Mirco and Subakan, Cem and Yıldız, Çağatay},
+    booktitle = {arXiv},
+    title={Time-Incremental Continued Pretraining of LLMs: Knowledge Updates Without Catastrophic Forgetting},
+    year = {2026},
+    pdf={https://arxiv.org/pdf/2609.23916},
+    html={https://arxiv.org/abs/2609.23916},
+    abstract={Large language models (LLMs) drift out of date the moment their pretraining ends, yet retraining from scratch is prohibitively expensive. Continued pretraining (CPT) is the natural remedy, but it is typically evaluated through a continual learning lens that assumes disjoint data streams. This is a poor fit for time-incremental updates on web-scale crawls, where successive snapshots share substantial URL overlap by design. We study time-incremental CPT in this realistic regime: continued pretraining on FineWeb-Edu dumps drawn strictly from after each model's knowledge cutoff, evaluated across six open-weight models spanning three families (OLMo2, Llama-3.1/3.2, Gemma-3-1B) and four parameter scales (1B-3B-7B-8B). We organize our findings around four practical questions. (i) Is knowledge acquired? Yes, but heterogeneously, and without catastrophic forgetting: five of six models also improve on pre-cutoff factual recall, and the gains track pretraining saturation (driven primarily by token budget per parameter). (ii) What does it cost? Almost nothing: the macro-average across a thirteen-task suite stays within 0.01 of the base for every model. (iii) What is the recipe? Data quality dominates quantity (a curated 6B-token slice matches a broader 40B one); the optima for knowledge acquisition and general capability are separated by roughly an order of magnitude in learning rate; and LoRA at sufficient rank matches full CPT. (iv) Does it survive deployment? CPT gains transfer through SFT, while DPO's effect is family-dependent. Together, these results paint a more optimistic picture of time-incremental CPT than the prior continual learning literature.},
+    selected={true}
+}
+
 @inproceedings{hizli2024identification,
     abbr={ICLR},
     author={Hızlı, Çağlar and Yıldız, Çağatay and Bethge, Matthias and John, ST and Marttinen, Pekka},
